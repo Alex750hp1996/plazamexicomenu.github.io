@@ -1,0 +1,505 @@
+/* ========================================
+   PLAZA MEXICO - ESTILOS CSS
+   ======================================== */
+
+
+/* ========================================
+   1. VARIABLES Y COLORES
+   ======================================== */
+
+ :root {
+    /* Paleta de colores */
+    --fondo-crema: #F9E4C8;
+    --negro-logo: #000000;
+    --cafe-acento: #E85D04;
+    --crema-oscuro: #E6D2B5;
+    --crema-claro: #FFF8E1;
+    /* Tipografía */
+    --fuente-titulos: 'Playfair Display', serif;
+    --fuente-welcome: 'Great Vibes', cursive;
+    --fuente-texto: 'Lato', sans-serif;
+    /* Variables de utilidad */
+    --sombra-suave: 0 10px 30px rgba(0, 0, 0, 0.5);
+    --transicion-rapida: 0.3s ease;
+}
+
+
+/* ========================================
+   2. RESET Y ESTRUCTURA GENERAL
+   ======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #2b2b2b;
+    margin: 0;
+    padding: 20px;
+    font-family: var(--fuente-texto);
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    line-height: 1.6;
+}
+
+
+/* ========================================
+   3. CONTENEDOR PRINCIPAL
+   ======================================== */
+
+.carta-menu {
+    background-color: var(--fondo-crema);
+    width: 100%;
+    max-width: 900px;
+    position: relative;
+    box-shadow: var(--sombra-suave);
+    /* Bordes decorativos */
+    border-left: 15px solid var(--cafe-acento);
+    border-right: 15px solid var(--cafe-acento);
+    border-top: 5px solid var(--cafe-acento);
+    border-bottom: 5px solid var(--cafe-acento);
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   4. HEADER (LOGO Y TÍTULO)
+   ======================================== */
+
+header {
+    text-align: center;
+    padding: 40px 20px 20px 20px;
+    width: 100%;
+}
+
+.welcome-script {
+    font-family: var(--fuente-welcome);
+    font-size: 3rem;
+    color: var(--negro-logo);
+    margin-bottom: -15px;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Contenedor del logo con borde doble superior e inferior */
+
+.logo-box {
+    border-top: 4px double var(--negro-logo);
+    border-bottom: 4px double var(--negro-logo);
+    padding: 10px 0;
+    margin: 10px auto;
+    width: 90%;
+    max-width: 500px;
+}
+
+header h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    color: var(--negro-logo);
+    margin: 0;
+    line-height: 1;
+    letter-spacing: 2px;
+    font-weight: 900;
+}
+
+.subtitle {
+    font-family: var(--fuente-titulos);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: bold;
+    margin-top: 5px;
+    border-top: 2px solid var(--negro-logo);
+    display: inline-block;
+    padding-top: 5px;
+    color: var(--cafe-acento);
+}
+
+
+/* ========================================
+   5. BARRA DE NAVEGACIÓN
+   ======================================== */
+
+.navbar {
+    background: linear-gradient(180deg, var(--cafe-acento) 0%, #3d2422 100%);
+    margin-top: 25px;
+    width: 100%;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu-principal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.menu-principal>li {
+    position: relative;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-principal>li:last-child {
+    border-bottom: none;
+}
+
+
+/* ========================================
+   6. ENLACES Y BOTONES DE NAVEGACIÓN
+   ======================================== */
+
+.menu-principal a,
+.dropbtn {
+    text-decoration: none;
+    color: var(--fondo-crema);
+    padding: 16px 20px;
+    display: block;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: var(--transicion-rapida);
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: center;
+    font-family: var(--fuente-texto);
+    font-size: 0.95rem;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.menu-principal a:hover,
+.menu-principal a:focus,
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgba(0, 0, 0, 0.3);
+    color: var(--fondo-crema);
+    outline: 2px solid var(--fondo-crema);
+    outline-offset: -2px;
+}
+
+
+/* ========================================
+   7. SISTEMA DROPDOWN (MÓVIL CON CHECKBOX)
+   ======================================== */
+
+.dropdown-check {
+    display: none;
+}
+
+.dropdown-content {
+    display: none;
+    background-color: var(--crema-oscuro);
+    padding: 0;
+    list-style: none;
+    border-top: 2px solid var(--cafe-acento);
+}
+
+.dropdown-content li {
+    border-bottom: 1px solid rgba(74, 44, 42, 0.15);
+}
+
+.dropdown-content li:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a {
+    color: var(--cafe-acento);
+    font-size: 0.9rem;
+    padding: 14px 20px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    text-align: left;
+    padding-left: 30px;
+}
+
+.dropdown-content a:hover,
+.dropdown-content a:focus {
+    background-color: var(--cafe-acento);
+    color: var(--fondo-crema);
+    padding-left: 35px;
+    outline: none;
+}
+
+
+/* Indicador visual del dropdown */
+
+.dropbtn {
+    position: relative;
+}
+
+.dropbtn::after {
+    content: ' ▾';
+    display: inline-block;
+    margin-left: 8px;
+    transition: transform var(--transicion-rapida);
+}
+
+.dropdown-check:checked~.dropbtn::after {
+    transform: rotate(180deg);
+}
+
+
+/* Activación del dropdown en móvil */
+
+.dropdown-check:checked~.dropdown-content {
+    display: block !important;
+    animation: slideDown 0.3s ease-out;
+}
+
+
+/* Estilo visual cuando el menú está abierto */
+
+.dropdown-check:checked~.dropbtn {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+    to {
+        opacity: 1;
+        max-height: 1000px;
+    }
+}
+
+
+/* ========================================
+   8. CONTENIDO PRINCIPAL
+   ======================================== */
+
+main {
+    padding: 50px 30px;
+    text-align: center;
+    min-height: 400px;
+}
+
+main h2 {
+    font-family: var(--fuente-titulos);
+    color: var(--cafe-acento);
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 900;
+}
+
+main p {
+    color: var(--negro-logo);
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    font-style: italic;
+}
+
+.decorative-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--cafe-acento);
+    box-shadow: 0 5px 20px rgba(74, 44, 42, 0.3);
+    object-fit: cover;
+    margin: 20px auto;
+    display: block;
+}
+
+
+/* Decoración adicional */
+
+.ornamento {
+    font-size: 2rem;
+    color: var(--cafe-acento);
+    margin: 20px 0;
+}
+
+
+/* ========================================
+   9. RESPONSIVE - TABLET Y DESKTOP
+   ======================================== */
+
+@media (min-width: 769px) {
+    /* Navegación horizontal */
+    .menu-principal {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .menu-principal>li {
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        width: auto;
+    }
+    .menu-principal>li:last-child {
+        border-right: none;
+    }
+    /* Dropdown flotante en desktop */
+    .dropdown {
+        position: relative;
+    }
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 280px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        z-index: 1000;
+        border-top: 3px solid var(--cafe-acento);
+        max-height: 400px;
+        overflow-y: auto;
+        text-align: left;
+    }
+    /* Hover en desktop (sin depender del checkbox) */
+    .dropdown:hover .dropdown-content,
+    .dropdown:focus-within .dropdown-content {
+        display: block;
+    }
+    /* Mejoras visuales */
+    main h2 {
+        font-size: 3rem;
+    }
+    .decorative-image {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+
+/* ========================================
+   10. RESPONSIVE - MÓVILES PEQUEÑOS
+   ======================================== */
+
+@media (max-width: 480px) {
+    .carta-menu {
+        border-left-width: 10px;
+        border-right-width: 10px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        letter-spacing: 2px;
+    }
+    .welcome-script {
+        font-size: 2.2rem;
+    }
+    .subtitle {
+        font-size: 1rem;
+        letter-spacing: 2px;
+    }
+    main {
+        padding: 30px 15px;
+    }
+    main h2 {
+        font-size: 2rem;
+    }
+}
+
+
+/* ========================================
+   11. ACCESIBILIDAD
+   ======================================== */
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cafe-acento);
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
+}
+
+
+/* Focus visible mejorado */
+
+*:focus-visible {
+    outline: 3px solid var(--cafe-acento);
+    outline-offset: 2px;
+}
+
+
+/* ========================================
+   12. MEJORAS VISUALES ADICIONALES
+   ======================================== */
+
+
+/* Textura sutil al fondo crema */
+
+.carta-menu::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: repeating-linear-gradient( 0deg, transparent, transparent 2px, rgba(0, 0, 0, 0.01) 2px, rgba(0, 0, 0, 0.01) 4px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+header,
+nav,
+main {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Scrollbar personalizado */
+
+.dropdown-content::-webkit-scrollbar {
+    width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-track {
+    background: var(--crema-oscuro);
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: var(--cafe-acento);
+    border-radius: 4px;
+}
+
+
+/* ========================================
+   13. PRINT STYLES
+   ======================================== */
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+    .carta-menu {
+        box-shadow: none;
+        max-width: 100%;
+    }
+    .navbar {
+        display: none;
+    }
+}

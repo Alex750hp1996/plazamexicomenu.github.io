@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plaza Mexico - Menú Restaurante</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rye&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+         :root {
+            --primary-orange: #ff8c00;
+            --dark-brown: #3e2723;
+            --bg-cream: #fff8e1;
+            --text-dark: #2c2c2c;
+            --border-style: 4px double var(--primary-orange);
+        }
+        
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--bg-cream);
+            color: var(--text-dark);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        /* Encabezado con estilo "Azteca/Mexicano" */
+        
+        header {
+            background-color: var(--dark-brown);
+            color: white;
+            text-align: center;
+            padding: 2rem 1rem;
+            border-bottom: 8px solid var(--primary-orange);
+        }
+        
+        header h1 {
+            font-family: 'Rye', serif;
+            font-size: 3.5rem;
+            margin: 0;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        
+        header p {
+            font-size: 1.5rem;
+            margin: 10px 0 0;
+            font-style: italic;
+        }
+        /* Navegación de direcciones */
+        
+        .locations {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background: #fff;
+            padding: 15px;
+            gap: 20px;
+            border-bottom: 1px solid #ccc;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        
+        .location-item strong {
+            color: var(--primary-orange);
+            display: block;
+        }
+        /* Contenedor principal del menú */
+        
+        .menu-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        /* Secciones del menú */
+        
+        .menu-section {
+            background: white;
+            border: var(--border-style);
+            margin-bottom: 40px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-family: 'Rye', serif;
+            color: var(--dark-brown);
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--primary-orange);
+            padding-bottom: 10px;
+        }
+        /* Grid para los platillos */
+        
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+        /* Estilo de cada platillo */
+        
+        .menu-item {
+            margin-bottom: 15px;
+        }
+        
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            border-bottom: 1px dotted #ccc;
+            margin-bottom: 5px;
+        }
+        
+        .item-header h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--dark-brown);
+            font-weight: 700;
+        }
+        
+        .price {
+            font-weight: bold;
+            color: #d35400;
+            font-size: 1.1rem;
+        }
+        
+        .description {
+            font-size: 0.9rem;
+            color: #555;
+            margin: 0;
+        }
+        /* Estilo para las Tablas de Combinaciones */
+        
+        .combo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 10px;
+        }
+        
+        .combo-item {
+            background: #fdfdfd;
+            padding: 10px;
+            border-left: 3px solid var(--primary-orange);
+        }
+        /* Advertencias */
+        
+        .disclaimer {
+            font-size: 0.8rem;
+            font-style: italic;
+            text-align: center;
+            margin-top: 20px;
+            color: #777;
+        }
+        /* Botón flotante para llamar (móvil) */
+        
+        .cta-button {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            background: var(--primary-orange);
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px;
+            transition: background 0.3s;
+        }
+        
+        .cta-button:hover {
+            background: var(--dark-brown);
+        }
+        /* Responsive */
+        
+        @media (max-width: 600px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            .menu-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Plaza Mexico</h1>
+        <p>Mexican Restaurant</p>
+    </header>
+
+    <div class="locations">
+        <div class="location-item">
+            <strong>Mason City, IA</strong> 1809 S Federal Ave.<br> (641) 423-4900
+        </div>
+        <div class="location-item">
+            <strong>Charles City, IA</strong> 701 S. Grand Avenue<br> (641) 228-5600
+        </div>
+        <div class="location-item">
+            <strong>Des Moines, IA</strong> 3841 E 14th St.<br> (515) 265-1720
+        </div>
+    </div>
+
+    <main class="menu-container">
+
+        <section class="menu-section" id="appetizers">
+            <h2 class="section-title">Appetizers</h2>
+            <p style="text-align: center; font-size: 0.9em; margin-bottom: 20px;">
+                Fresh crispy chips covered with hot melted cheese. Jalapenos upon request $1.00 more.<br> For DELUXE (sour cream and guacamole) add $2.00
+            </p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Nachos Cheese</h3>
+                        <span class="price">S 6.00 / L 7.00</span>
+                    </div>
+                    <p class="description">Chips with cheddar cheese.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>House Nachos</h3>
+                        <span class="price">S 8.00 / L 9.00</span>
+                    </div>
+                    <p class="description">Crispy bed of chips topped with choice of beef, chicken or picadillo and melted cheese.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Nachos Chorizo</h3>
+                        <span class="price">S 8.00 / L 10.00</span>
+                    </div>
+                    <p class="description">Homemade Mexican Sausage with Monterey Jack cheese.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>The Grande Fiesta Platter</h3>
+                        <span class="price">16.00</span>
+                    </div>
+                    <p class="description">A delicious assortment of our finest appetizers including taquitos rancheros, chicken taquitos, quesadillas, nachos, sour cream, guacamole and parmesan cheese.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Chicken Taquitos</h3>
+                        <span class="price">11.00</span>
+                    </div>
+                    <p class="description">Two rolled flour tortillas stuffed with fresh tasty chicken on a bed of lettuce, sour cream, guacamole.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Quesadillas</h3>
+                        <span class="price">11.50</span>
+                    </div>
+                    <p class="description">Choice of Beef, Chicken, or Picadillo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="carnes">
+            <h2 class="section-title">Carnes (Meat Dishes)</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Carne Asada</h3>
+                        <span class="price">18.00</span>
+                    </div>
+                    <p class="description">Slices of skirt steak cooked over charcoal served with guacamole.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Steak Jalisco</h3>
+                        <span class="price">18.00</span>
+                    </div>
+                    <p class="description">T-bone steak marinated and grilled. Served with guacamole.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Carne Asada & More</h3>
+                        <span class="price">20.00</span>
+                    </div>
+                    <p class="description">Slices of skirt steak with choice of Chile Relleno, Enchilada or Chimichanga.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Plaza Mexico</h3>
+                        <span class="price">22.00</span>
+                    </div>
+                    <p class="description">12 shrimp wrapped in bacon with 5 oz. Carne Asada, served with rice, beans and Pico de Gallo.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>El Mezquite Grill</h3>
+                        <span class="price">26.00</span>
+                    </div>
+                    <p class="description">12 shrimp wrapped in bacon with 12 oz. grilled T-bone Steak.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="pollo">
+            <h2 class="section-title">Pollo (Chicken)</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Arroz Con Pollo</h3>
+                        <span class="price">15.00</span>
+                    </div>
+                    <p class="description">Boneless breast of chicken sauteed in a special sauce with mushrooms, over rice with melted cheese.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Pollo Loco</h3>
+                        <span class="price">15.00</span>
+                    </div>
+                    <p class="description">Chunks of chicken breast with parmesan cheese, tomatoes, green peppers and onions over rice.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Pollo Fundido</h3>
+                        <span class="price">18.00</span>
+                    </div>
+                    <p class="description">Grilled chicken breast with sauteed onions, bell peppers, and mushrooms. Topped with cheese sauce.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Chori Pollo</h3>
+                        <span class="price">18.00</span>
+                    </div>
+                    <p class="description">Chunks of chicken breast with chorizo over rice with cheese sauce.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="mariscos">
+            <h2 class="section-title">Mariscos (Seafood)</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Camarones ala Plancha</h3>
+                        <span class="price">15.00</span>
+                    </div>
+                    <p class="description">Grilled shrimp with Mexican spices, onions, peppers and butter.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Arroz Con Mariscos</h3>
+                        <span class="price">15.00</span>
+                    </div>
+                    <p class="description">Shrimp or scallops sauteed with mushrooms/veggies in unique sauce over rice.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Seafood Chimichanga</h3>
+                        <span class="price">16.00</span>
+                    </div>
+                    <p class="description">Large flour tortilla stuffed with scallops, shrimp, crabmeat, deep fried.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Camarones Con Tocino</h3>
+                        <span class="price">15.00</span>
+                    </div>
+                    <p class="description">Shrimp wrapped in bacon, deep fried.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="fajitas">
+            <h2 class="section-title">Fajitas & House Specials</h2>
+            <p style="text-align: center;">Served sizzling hot over a bed of sauteed onions and green peppers.</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Steak or Chicken Fajitas</h3>
+                        <span class="price">14.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Shrimp Fajitas</h3>
+                        <span class="price">15.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Fajita Pueblo Viejo</h3>
+                        <span class="price">18.00</span>
+                    </div>
+                    <p class="description">Steak, Chicken, Shrimp and Chorizo.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Molcajete</h3>
+                        <span class="price">17.00</span>
+                    </div>
+                    <p class="description">Mexican style stew with flank steak, chicken, shrimp, peppers and mushrooms topped with cheese.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="combinations">
+            <h2 class="section-title">Combinations</h2>
+            <p style="text-align: center; margin-bottom:20px;">All combinations served with rice and beans.</p>
+            <div class="combo-grid">
+                <div class="combo-item"><strong>#1</strong> 2 Tacos - $13.00</div>
+                <div class="combo-item"><strong>#2</strong> 2 Enchiladas - $13.00</div>
+                <div class="combo-item"><strong>#3</strong> 2 Burritos - $13.00</div>
+                <div class="combo-item"><strong>#4</strong> Chimichanga & choice of Enchilada - $15.00</div>
+                <div class="combo-item"><strong>#5</strong> 2 Pork Burritos - $15.00</div>
+                <div class="combo-item"><strong>#14</strong> 1 Chile Relleno, 1 Chimichanga, 1 Enchilada - $18.00</div>
+                <div class="combo-item"><strong>#17</strong> 6 Bacon wrapped shrimp, Chicken Breast, Mushrooms - $18.00</div>
+                <div class="combo-item"><strong>#19</strong> 6 Bacon wrapped shrimp, Skirt Steak, Burrito - $18.00</div>
+            </div>
+        </section>
+
+        <section class="menu-section" id="lunch">
+            <h2 class="section-title">Lunch Menu</h2>
+            <p style="text-align: center; font-weight: bold;">Served Monday - Saturday 11:00 a.m. to 3:00 p.m.</p>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Combinations (1-10)</h3>
+                        <span class="price">9.00</span>
+                    </div>
+                    <p class="description">Choice of Enchilada, Taco, Tamale, Chimichanga, Chalupa, etc. Served with rice and beans.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Lunch Fajitas</h3>
+                        <span class="price">12.00</span>
+                    </div>
+                    <p class="description">Chicken, Steak or Combo.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3>Taco Salad</h3>
+                        <span class="price">7.00</span>
+                    </div>
+                    <p class="description">Beef, Chicken or Picadillo.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu-section" style="background-color: #333; color: white; border-color: #555;" id="drinks">
+            <h2 class="section-title" style="color: white; border-bottom-color: white;">Bar & Drinks</h2>
+            <div class="menu-grid">
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 style="color: #ffa500;">Margaritas</h3>
+                        <span class="price">Reg 5.00 / Flavored 6.50</span>
+                    </div>
+                    <p class="description" style="color: #ccc;">Lime, Raspberry, Peach, Watermelon, Strawberry, Banana.</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 style="color: #ffa500;">Thursday Special</h3>
+                    </div>
+                    <p class="description" style="color: #ccc;">16oz Lime Margarita ONLY $3.00</p>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 style="color: #ffa500;">Coronarita</h3>
+                        <span class="price">10.00</span>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-header">
+                        <h3 style="color: #ffa500;">Imported Beer</h3>
+                        <span class="price">5.00</span>
+                    </div>
+                    <p class="description" style="color: #ccc;">Corona, Pacifico, Modelo, Dos Equis, Tecate.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p class="disclaimer">
+            * Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk for foodborne illness.<br> Plaza Mexico © 2025
+        </p>
+    </footer>
+
+</body>
+
+</html>

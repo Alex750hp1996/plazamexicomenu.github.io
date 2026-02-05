@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Plaza Mexico - Authentic Mexican Restaurant in Mason City and Charles City">
+    <title>Menú Plaza Mexico - Authentic Mexican Restaurant</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="C:\Users\Alejandro\Desktop\proyectos\Menu Plaza Mexico\resources\css\index.css">
+</head>
+
+<body>
+    <!-- Skip link para accesibilidad -->
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <div class="carta-menu">
+
+        <header>
+            <div class="welcome-script">Welcome</div>
+
+            <div class="logo-box">
+                <h1>Plaza Mexico</h1>
+            </div>
+
+            <div class="subtitle">Mexican Restaurant</div>
+        </header>
+
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+            <ul class="menu-principal">
+
+                <!-- MENÚ DROPDOWN -->
+                <li class="dropdown">
+                    <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
+                    <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
+                        Menu
+                    </label>
+
+                    <ul class="dropdown-content" role="menu">
+                        <li role="none"><a href="C:\Users\Alejandro\Desktop\proyectos\Menu Plaza Mexico\appetizers.html" role="menuitem">Appetizers</a></li>
+                        <li role="none"><a href="C:\Users\Alejandro\Desktop\proyectos\Menu Plaza Mexico\carnes.html" role="menuitem">Carnes (Meat Dishes)</a></li>
+                        <li role="none"><a href="C:\Users\Alejandro\Desktop\proyectos\Menu Plaza Mexico\house.html" role="menuitem">House Specials</a></li>
+                        <li role="none"><a href="#mariscos" role="menuitem">Mariscos (Seafood)</a></li>
+                        <li role="none"><a href="#favorites" role="menuitem">Mexican Favorites</a></li>
+                        <li role="none"><a href="#huevos" role="menuitem">Huevos (Egg Dishes)</a></li>
+                        <li role="none"><a href="#fajitas" role="menuitem">Fajitas</a></li>
+                        <li role="none"><a href="#combinations" role="menuitem">Combinations</a></li>
+                        <li role="none"><a href="#burritos" role="menuitem">Los Burritos</a></li>
+                        <li role="none"><a href="#ensaladas" role="menuitem">Ensaladas</a></li>
+                        <li role="none"><a href="#taco-salads" role="menuitem">Taco Salads</a></li>
+                        <li role="none"><a href="#enchiladas" role="menuitem">Las Enchiladas</a></li>
+                        <li role="none"><a href="#drinks" role="menuitem">Drink Menu</a></li>
+                    </ul>
+                </li>
+
+                <!-- LOCATIONS DROPDOWN -->
+                <li class="dropdown">
+                    <input type="checkbox" id="locations-toggle" class="dropdown-check" aria-hidden="true">
+                    <label for="locations-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
+                        Locations
+                    </label>
+
+                    <ul class="dropdown-content" role="menu">
+                        <li role="none">
+                            <a href="https://maps.app.goo.gl/Z8GrqYntGEDDN9YB9" role="menuitem">
+                                <strong>Mason City</strong>
+                                <br><small style="font-size: 0.85em; opacity: 0.8;">1809 S Federal Ave.</small>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="https://maps.app.goo.gl/yaeFAVvSrbWcsjjW9" role="menuitem">
+                                <strong>Charles City</strong>
+                                <br><small style="font-size: 0.85em; opacity: 0.8;">701 S. Grand Avenue</small>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <!-- CONTACT LINK -->
+                <li><a href="#contact">Contact</a></li>
+
+            </ul>
+        </nav>
+
+        <main id="main-content">
+            <div class="ornamento">❋ ❋ ❋</div>
+
+            <h2>Authentic Mexican Flavor</h2>
+            <p>Experience the taste of Mexico in every dish</p>
+
+            <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=400&h=400&fit=crop" alt="Delicious Mexican tacos with fresh ingredients" class="decorative-image" loading="lazy">
+
+            <div class="ornamento">❋ ❋ ❋</div>
+
+            <p style="margin-top: 30px; font-size: 1rem; font-style: normal;">
+                <strong>Bienvenidos a Plaza Mexico</strong><br> Where tradition meets flavor in every bite
+            </p>
+        </main>
+
+    </div>
+
+    <script>
+        // Mejora de accesibilidad: sincronizar aria-expanded con checkboxes
+        document.querySelectorAll('.dropdown-check').forEach(checkbox => {
+            const label = checkbox.nextElementSibling;
+
+            checkbox.addEventListener('change', function() {
+                if (label) {
+                    label.setAttribute('aria-expanded', this.checked);
+                }
+            });
+
+            // Permitir activación con Enter/Space en el label
+            if (label) {
+                label.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        checkbox.click();
+                    }
+                });
+            }
+        });
+
+        // Cerrar dropdowns al hacer clic fuera (solo móvil)
+        if (window.innerWidth < 768) {
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-check:checked').forEach(checkbox => {
+                        checkbox.checked = false;
+                        const label = checkbox.nextElementSibling;
+                        if (label) label.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
