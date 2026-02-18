@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="House Specials Menu - Plaza Mexico Mexican Restaurant">
-    <title>House Specials - Plaza Mexico</title>
+    <meta name="description" content="Side Orders Menu - Plaza Mexico Mexican Restaurant">
+    <title>Side Orders - Plaza Mexico</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,10 +16,6 @@
     <link rel="stylesheet" href="resources/css/index.css">
 
     <style>
-        /* ========================================
-           ESTILOS ESPECÍFICOS PARA PÁGINAS DE MENÚ
-           ======================================== */
-        
         .menu-content {
             padding: 40px 30px;
             max-width: 900px;
@@ -111,7 +107,6 @@
             margin: 0;
             opacity: 0.85;
         }
-        /* Decoración */
         
         .ornamento {
             font-size: 2rem;
@@ -119,7 +114,6 @@
             margin: 30px 0;
             text-align: center;
         }
-        /* Botón de regreso mejorado */
         
         .back-button {
             display: inline-flex;
@@ -151,7 +145,6 @@
             content: '←';
             font-size: 1.2rem;
         }
-        /* Responsive - Tablet y Desktop */
         
         @media (min-width: 768px) {
             .menu-grid {
@@ -161,14 +154,10 @@
             .category-title {
                 font-size: 3.5rem;
             }
-            .category-desc {
-                font-size: 1.1rem;
-            }
             .item-name {
                 font-size: 1.35rem;
             }
         }
-        /* Responsive - Móviles pequeños */
         
         @media (max-width: 480px) {
             .menu-content {
@@ -193,11 +182,9 @@
 </head>
 
 <body>
-    <!-- Skip link para accesibilidad -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <div class="carta-menu">
-
         <header>
             <div class="welcome-script">Welcome</div>
 
@@ -210,8 +197,6 @@
 
         <nav class="navbar" role="navigation" aria-label="Navegación principal">
             <ul class="menu-principal">
-
-                <!-- MENÚ DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -236,7 +221,6 @@
                     </ul>
                 </li>
 
-                <!-- LOCATIONS DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="locations-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="locations-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -259,106 +243,182 @@
                     </ul>
                 </li>
 
-                <!-- HOME LINK -->
                 <li><a href="index.html">Home</a></li>
-
             </ul>
         </nav>
 
         <main id="main-content" class="menu-content">
             <div class="ornamento">❋ ❋ ❋</div>
 
-            <h2 class="category-title">House Specials</h2>
-            <p class="category-subtitle">Pollo (Chicken Dishes)</p>
-            <p class="category-desc">
-                All house specials dinners served with rice, beans and tortillas.<br> Cooked with butter and spices.
-            </p>
+            <h2 class="category-title">Side Orders</h2>
+            <p class="category-subtitle">(Sides & Add-ons)</p>
+            <p class="category-desc">Cheese Dip Add +$1.00</p>
 
             <div class="menu-grid">
-
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Chicken Carnitas</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Taco</span>
+                        <span class="item-price">$3.00</span>
                     </div>
-                    <p class="item-desc">Chicken breast chunks cooked with green peppers and onion. Served with guacamole.</p>
+                    <p class="item-desc">Crispy or soft.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Chicken En Mole</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Street Taco</span>
+                        <span class="item-price">$4.00</span>
                     </div>
-                    <p class="item-desc">Boneless chicken in a delicious, sweet, spicy Mexican sauce.</p>
+                    <p class="item-desc">Steak, chicken or chorizo (cilantro and onion).</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo ala Crema</span>
-                        <span class="item-price">$15.00</span>
+                        <span class="item-name">Steak Taco Soft</span>
+                        <span class="item-price">$4.00</span>
                     </div>
-                    <p class="item-desc">Boneless chicken cooked in a delicious parmesan cheese cream sauce.</p>
+                    <p class="item-desc">Lettuce, tomatoes and cheese.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Loco</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Chalupa</span>
+                        <span class="item-price">$5.00</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken sautéed in special red sauce with green peppers and onion. Served on a bed of rice with melted Monterey Jack cheese.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Asado</span>
-                        <span class="item-price">$16.00</span>
+                        <span class="item-name">Tamale</span>
+                        <span class="item-price">$3.75</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken marinated and grilled. Served with sour cream and guacamole.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Arroz Con Pollo</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Chile Relleno</span>
+                        <span class="item-price">$3.75</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken sautéed in a special sauce with mushroom. Served over a bed of rice with melted Monterey Jack cheese. Not served with beans.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Fundido</span>
-                        <span class="item-price">$16.00</span>
+                        <span class="item-name">Chiles Toreados</span>
+                        <span class="item-price">2 / $1.50</span>
                     </div>
-                    <p class="item-desc">Grilled chicken breast rolled in a flour tortilla. Topped with mild cheese sauce.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Chori Pollo</span>
-                        <span class="item-price">$16.00</span>
+                        <span class="item-name">Enchilada</span>
+                        <span class="item-price">$4.00</span>
                     </div>
-                    <p class="item-desc">Chunks of chicken breast with chorizo and rice. Covered with cheese sauce and green onions.</p>
+                    <p class="item-desc">Cheese or beef.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Ala Diabla</span>
-                        <span class="item-price">$13.00</span>
+                        <span class="item-name">Enchilada</span>
+                        <span class="item-price">$4.00</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken and mushrooms sautéed in a spicy red hot sauce.</p>
+                    <p class="item-desc">Chicken or picadillo.</p>
                 </div>
 
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito</span>
+                        <span class="item-price">$6.50</span>
+                    </div>
+                    <p class="item-desc">Beef, chicken or picadillo.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Chicken Breast</span>
+                        <span class="item-price">$4.00</span>
+                    </div>
+                    <p class="item-desc">2 pieces.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Chimichanga</span>
+                        <span class="item-price">$6.50</span>
+                    </div>
+                    <p class="item-desc">Chicken, beef or picadillo.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Bacon Wrapped Shrimp</span>
+                        <span class="item-price">6 $6.00 / 12 $12.00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Rice</span>
+                        <span class="item-price">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Beans</span>
+                        <span class="item-price">$3.50</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Tortillas</span>
+                        <span class="item-price">$1.50</span>
+                    </div>
+                    <p class="item-desc">Flour or corn.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Sour Cream</span>
+                        <span class="item-price">$1.75</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Guacamole</span>
+                        <span class="item-price">$4.00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">French Fries</span>
+                        <span class="item-price">$3.00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Cheese Dip</span>
+                        <span class="item-price">Sm $4.50 / Lg $9.00</span>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Sauteed Mushrooms in Butter</span>
+                        <span class="item-price">$5.00</span>
+                    </div>
+                </div>
             </div>
 
             <div class="ornamento">❋ ❋ ❋</div>
 
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
-
     </div>
 
     <script>
-        // Mejora de accesibilidad: sincronizar aria-expanded con checkboxes
         document.querySelectorAll('.dropdown-check').forEach(checkbox => {
             const label = checkbox.nextElementSibling;
 
@@ -368,7 +428,6 @@
                 }
             });
 
-            // Permitir activación con Enter/Space en el label
             if (label) {
                 label.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -379,7 +438,6 @@
             }
         });
 
-        // Cerrar dropdowns al hacer clic fuera (solo móvil)
         if (window.innerWidth < 769) {
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.dropdown')) {
@@ -392,7 +450,6 @@
             });
         }
     </script>
-
 </body>
 
 </html>
