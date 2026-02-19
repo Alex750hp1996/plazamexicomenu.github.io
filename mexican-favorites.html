@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Mariscos (Seafood) Menu - Plaza Mexico Mexican Restaurant">
-    <title>Mariscos - Plaza Mexico</title>
+    <meta name="description" content="Mexican Favorites Menu - Plaza Mexico Mexican Restaurant">
+    <title>Mexican Favorites - Plaza Mexico</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,6 +16,10 @@
     <link rel="stylesheet" href="resources/css/index.css">
 
     <style>
+        /* ========================================
+           ESTILOS ESPECÍFICOS PARA PÁGINAS DE MENÚ
+           ======================================== */
+        
         .menu-content {
             padding: 40px 30px;
             max-width: 900px;
@@ -36,10 +40,22 @@
         .category-subtitle {
             text-align: center;
             font-style: italic;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             color: var(--negro-logo);
             font-size: 1.1rem;
             opacity: 0.8;
+        }
+        
+        .category-desc {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: var(--negro-logo);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         
         .menu-grid {
@@ -48,7 +64,6 @@
             gap: 25px;
             margin-top: 30px;
         }
-
         
         .menu-item {
             background-color: rgba(255, 255, 255, 0.4);
@@ -96,6 +111,7 @@
             margin: 0;
             opacity: 0.85;
         }
+        /* Decoración */
         
         .ornamento {
             font-size: 2rem;
@@ -103,6 +119,7 @@
             margin: 30px 0;
             text-align: center;
         }
+        /* Botón de regreso mejorado */
         
         .back-button {
             display: inline-flex;
@@ -134,20 +151,24 @@
             content: '←';
             font-size: 1.2rem;
         }
+        /* Responsive - Tablet y Desktop */
         
         @media (min-width: 768px) {
             .menu-grid {
                 grid-template-columns: 1fr 1fr;
                 column-gap: 30px;
             }
-
             .category-title {
                 font-size: 3.5rem;
+            }
+            .category-desc {
+                font-size: 1.1rem;
             }
             .item-name {
                 font-size: 1.35rem;
             }
         }
+        /* Responsive - Móviles pequeños */
         
         @media (max-width: 480px) {
             .menu-content {
@@ -172,9 +193,11 @@
 </head>
 
 <body>
+    <!-- Skip link para accesibilidad -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <div class="carta-menu">
+
         <header>
             <div class="welcome-script">Welcome</div>
 
@@ -187,6 +210,8 @@
 
         <nav class="navbar" role="navigation" aria-label="Navegación principal">
             <ul class="menu-principal">
+
+                <!-- MENÚ DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -211,6 +236,7 @@
                     </ul>
                 </li>
 
+                <!-- LOCATIONS DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="locations-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="locations-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -233,57 +259,89 @@
                     </ul>
                 </li>
 
+                <!-- HOME LINK -->
                 <li><a href="index.html">Home</a></li>
+
             </ul>
         </nav>
 
         <main id="main-content" class="menu-content">
             <div class="ornamento">❋ ❋ ❋</div>
 
-            <h2 class="category-title">Mariscos</h2>
-            <p class="category-subtitle">(Seafood)</p>
+            <h2 class="category-title">Mexican Favorites</h2>
+            <p class="category-subtitle">Our Signature Favorites</p>
+            <p class="category-desc">
+                Classic Plaza Mexico house favorites served with fresh ingredients and bold traditional flavor.
+            </p>
 
             <div class="menu-grid">
+
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Camarones Ala Plancha</span>
-                        <span class="item-price">$15.00</span>
+                        <span class="item-name">Taquitos Rancheros</span>
+                        <span class="item-price">$14.00</span>
                     </div>
-                    <p class="item-desc">Grilled shrimp with Mexican spices, onions, peppers and butter.</p>
+                    <p class="item-desc">Crisp corn tortilla filled with shredded beef. Garnished with sour cream and guacamole.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Arroz Con Mariscos</span>
-                        <span class="item-price">$15.00</span>
-                    </div>
-                    <p class="item-desc">Shrimp or scallops sauteed with mushrooms and vegetables in a unique sauce over rice.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Seafood Chimichanga</span>
+                        <span class="item-name">Tacos Al Carbon</span>
                         <span class="item-price">$16.00</span>
                     </div>
-                    <p class="item-desc">Large flour tortilla stuffed with scallops, shrimp, crabmeat and deep fried.</p>
+                    <p class="item-desc">Your choice of marinated beef or chicken. Served in soft corn tortillas with tomato, spring onion and cilantro. Includes sour cream and guacamole.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Camarones Con Tocino</span>
-                        <span class="item-price">$15.00</span>
+                        <span class="item-name">Fajita Quesadilla</span>
+                        <span class="item-price">$16.00</span>
                     </div>
-                    <p class="item-desc">Shrimp wrapped in bacon and deep fried.</p>
+                    <p class="item-desc">Flour tortilla stuffed with melted cheese and your choice of chicken or steak strips. Served with pico de gallo, rice and beans, sour cream and guacamole.</p>
                 </div>
-            </div>
 
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Molcajete</span>
+                        <span class="item-price">$17.00</span>
+                    </div>
+                    <p class="item-desc">Mexican-style stew with 4 oz. flank steak, 4 oz. chicken breast, 3 oz. shrimp, bell pepper, mushrooms and onion topped with melted cheese. Served with rice and beans, pico de gallo and salsa.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Flautas</span>
+                        <span class="item-price">$14.00</span>
+                    </div>
+                    <p class="item-desc">Crisp flour tortillas stuffed with shredded beef. Garnished with sour cream and guacamole.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Guadalajara</span>
+                        <span class="item-price">$16.00</span>
+                    </div>
+                    <p class="item-desc">Chicken, steak and shrimp with grilled peppers and onions over a bed of rice. Topped with cheese sauce.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Rey Especial</span>
+                        <span class="item-price">$12.00</span>
+                    </div>
+                    <p class="item-desc">Chicken or steak fajita meat on a bed of rice topped with cheese sauce.</p>
+                </div>
+
+            </div>
             <div class="ornamento">❋ ❋ ❋</div>
 
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
+
     </div>
 
     <script>
+        // Mejora de accesibilidad: sincronizar aria-expanded con checkboxes
         document.querySelectorAll('.dropdown-check').forEach(checkbox => {
             const label = checkbox.nextElementSibling;
 
@@ -293,6 +351,7 @@
                 }
             });
 
+            // Permitir activación con Enter/Space en el label
             if (label) {
                 label.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -303,6 +362,7 @@
             }
         });
 
+        // Cerrar dropdowns al hacer clic fuera (solo móvil)
         if (window.innerWidth < 769) {
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.dropdown')) {
@@ -315,6 +375,7 @@
             });
         }
     </script>
+
 </body>
 
 </html>
