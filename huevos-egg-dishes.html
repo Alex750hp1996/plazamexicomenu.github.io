@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Appetizers Menu - Plaza Mexico Mexican Restaurant">
-    <title>Appetizers - Plaza Mexico</title>
+    <meta name="description" content="Huevos (Egg Dishes) Menu - Plaza Mexico Mexican Restaurant">
+    <title>Huevos (Egg Dishes) - Plaza Mexico</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,15 +17,15 @@
 
     <style>
         /* ========================================
-           ESTILOS ESPECÍFICOS PARA PÁGINAS DE MENÚ
+           ESTILOS ESPECIFICOS PARA PAGINAS DE MENU
            ======================================== */
-        
+
         .menu-content {
             padding: 40px 30px;
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .category-title {
             font-family: var(--fuente-titulos);
             color: var(--cafe-acento);
@@ -36,11 +36,20 @@
             font-weight: 900;
             letter-spacing: 2px;
         }
-        
+
+        .category-subtitle {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--negro-logo);
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
         .category-desc {
             text-align: center;
             font-style: italic;
-            margin-bottom: 40px;
+            margin-bottom: 16px;
             color: var(--negro-logo);
             font-size: 1rem;
             line-height: 1.6;
@@ -48,14 +57,27 @@
             margin-left: auto;
             margin-right: auto;
         }
-        
+
+        .warning-box {
+            background: #f6c32f;
+            border: 2px solid #b48100;
+            color: #222;
+            padding: 12px 16px;
+            border-radius: 6px;
+            max-width: 820px;
+            margin: 0 auto 24px auto;
+            font-size: 0.95rem;
+            font-weight: 700;
+            line-height: 1.4;
+        }
+
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
         }
-        
+
         .menu-item {
             background-color: rgba(255, 255, 255, 0.4);
             padding: 20px;
@@ -63,12 +85,12 @@
             border-left: 4px solid var(--cafe-acento);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .menu-item:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
         }
-        
+
         .item-header {
             display: flex;
             justify-content: space-between;
@@ -76,7 +98,7 @@
             margin-bottom: 10px;
             gap: 15px;
         }
-        
+
         .item-name {
             font-family: var(--fuente-titulos);
             font-size: 1.25rem;
@@ -86,7 +108,7 @@
             letter-spacing: 0.5px;
             flex: 1;
         }
-        
+
         .item-price {
             font-weight: 700;
             color: var(--cafe-acento);
@@ -94,7 +116,7 @@
             font-size: 1.1rem;
             font-family: var(--fuente-texto);
         }
-        
+
         .item-desc {
             font-size: 0.95rem;
             color: var(--negro-logo);
@@ -102,16 +124,14 @@
             margin: 0;
             opacity: 0.85;
         }
-        /* Decoración */
-        
+
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
             margin: 30px 0;
             text-align: center;
         }
-        /* Botón de regreso mejorado */
-        
+
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -131,51 +151,56 @@
             justify-content: center;
             max-width: 250px;
         }
-        
+
         .back-button:hover {
             background-color: var(--negro-logo);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .back-button::before {
-            content: '←';
-            font-size: 1.2rem;
+            content: '<-';
+            font-size: 1rem;
         }
-        /* Responsive - Tablet y Desktop */
-        
+
         @media (min-width: 768px) {
             .menu-grid {
                 grid-template-columns: 1fr 1fr;
                 column-gap: 30px;
             }
+
             .category-title {
                 font-size: 3.5rem;
             }
+
             .category-desc {
                 font-size: 1.1rem;
             }
+
             .item-name {
                 font-size: 1.35rem;
             }
         }
-        /* Responsive - Móviles pequeños */
-        
+
         @media (max-width: 480px) {
             .menu-content {
                 padding: 30px 20px;
             }
+
             .category-title {
                 font-size: 2.2rem;
             }
+
             .item-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
             }
+
             .item-price {
                 font-size: 1rem;
             }
+
             .menu-item {
                 padding: 15px;
             }
@@ -184,7 +209,6 @@
 </head>
 
 <body>
-    <!-- Skip link para accesibilidad -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <div class="carta-menu">
@@ -199,10 +223,9 @@
             <div class="subtitle">Mexican Restaurant</div>
         </header>
 
-        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+        <nav class="navbar" role="navigation" aria-label="Navegacion principal">
             <ul class="menu-principal">
 
-                <!-- MENÚ DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -227,7 +250,6 @@
                     </ul>
                 </li>
 
-                <!-- LOCATIONS DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="locations-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="locations-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -250,114 +272,53 @@
                     </ul>
                 </li>
 
-                <!-- HOME LINK -->
                 <li><a href="index.html">Home</a></li>
 
             </ul>
         </nav>
 
         <main id="main-content" class="menu-content">
-            <div class="ornamento">❋ ❋ ❋</div>
+            <div class="ornamento">*** *** ***</div>
 
-            <h2 class="category-title">Appetizers</h2>
+            <h2 class="category-title">Huevos</h2>
+            <p class="category-subtitle">Egg Dishes</p>
             <p class="category-desc">
-                Our nachos are fresh crispy chips covered with hot melted cheese.<br>
-                <small>(Jalapeños upon request +$1.00)</small>
+                All egg dishes served with rice, beans and tortillas. Add $1.00 for dinner salad.
             </p>
+
+            <div class="warning-box">
+                * Consuming raw or undercooked meats, poultry, seafood, shellfish, or eggs may increase your risk for foodborne illness.
+            </div>
 
             <div class="menu-grid">
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Nachos Cheese</span>
-                        <span class="item-price">Sm $6.00 / Lg $7.00</span>
+                        <span class="item-name">Chorizo Con Huevos</span>
+                        <span class="item-price">$13.00</span>
                     </div>
-                    <p class="item-desc">Chips with cheddar cheese.</p>
+                    <p class="item-desc">Ground Mexican sausage blended with eggs, tomato and green onion.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">House Nachos</span>
-                        <span class="item-price">Sm $8.00 / Lg $9.00</span>
+                        <span class="item-name">Spanish Omelette</span>
+                        <span class="item-price">$13.00</span>
                     </div>
-                    <p class="item-desc">Crispy bed of chips topped with melted cheese and choice of beef, chicken or picadillo.</p>
+                    <p class="item-desc">Stuffed with sauteed mushrooms, carrots, onions and green pepper. Served with melted cheese and sliced avocado.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Nachos Chorizo</span>
-                        <span class="item-price">Sm $8.00 / Lg $10.00</span>
+                        <span class="item-name">Huevos Rancheros</span>
+                        <span class="item-price">$12.00</span>
                     </div>
-                    <p class="item-desc">Homemade Mexican sausage with Monterey Jack cheese.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Super Nachos</span>
-                        <span class="item-price">Sm $8.50 / Lg $10.00</span>
-                    </div>
-                    <p class="item-desc">Beans, guacamole, sour cream, tomatoes, onions, and cheddar cheese. (Add meat +$1.00)</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Rey Nachos</span>
-                        <span class="item-price">Sm $11.00 / Lg $13.00</span>
-                    </div>
-                    <p class="item-desc">Fajita chicken or steak with grilled pepper and onions. Topped with cheese dip.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Chori Queso</span>
-                        <span class="item-price">$7.00</span>
-                    </div>
-                    <p class="item-desc">Homemade Mexican sausage with warm queso dip.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Chicken Taquitos</span>
-                        <span class="item-price">$11.00</span>
-                    </div>
-                    <p class="item-desc">Two rolled flour tortillas stuffed with fresh chicken, garnished with sour cream and guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Grande Fiesta Platter</span>
-                        <span class="item-price">$16.00</span>
-                    </div>
-                    <p class="item-desc">A delicious assortment: taquitos rancheros, chicken taquitos, quesadillas, and nachos.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Mexican Pizza</span>
-                        <span class="item-price">$10.00</span>
-                    </div>
-                    <p class="item-desc">Deep-fried flour tortilla topped with beans, beef, cheese, tomatoes, sour cream and guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Quesadilla Asada</span>
-                        <span class="item-price">$12.50</span>
-                    </div>
-                    <p class="item-desc">Flour tortillas stuffed with grilled chopped steak and melted cheese.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Quesadillas</span>
-                        <span class="item-price">$11.50</span>
-                    </div>
-                    <p class="item-desc">Choice of Beef, Chicken, or Picadillo.</p>
+                    <p class="item-desc">Eggs over-easy topped with cheese and spicy sauce.</p>
                 </div>
 
             </div>
 
-            <div class="ornamento">❋ ❋ ❋</div>
+            <div class="ornamento">*** *** ***</div>
 
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
@@ -365,7 +326,6 @@
     </div>
 
     <script>
-        // Mejora de accesibilidad: sincronizar aria-expanded con checkboxes
         document.querySelectorAll('.dropdown-check').forEach(checkbox => {
             const label = checkbox.nextElementSibling;
 
@@ -375,7 +335,6 @@
                 }
             });
 
-            // Permitir activación con Enter/Space en el label
             if (label) {
                 label.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -386,7 +345,6 @@
             }
         });
 
-        // Cerrar dropdowns al hacer clic fuera (solo móvil)
         if (window.innerWidth < 769) {
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.dropdown')) {
