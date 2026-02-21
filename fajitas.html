@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fajitas Menu - Plaza Mexico Mexican Restaurant">
+    <title>Fajitas - Plaza Mexico</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- CSS Principal -->
+    <link rel="stylesheet" href="resources/css/index.css">
+
+    <style>
+        .menu-content {
+            padding: 40px 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .category-title {
+            font-family: var(--fuente-titulos);
+            color: var(--cafe-acento);
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 2px;
+        }
+
+        .category-subtitle {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 10px;
+            color: var(--negro-logo);
+            font-size: 1.1rem;
+            opacity: 0.8;
+        }
+
+        .category-desc {
+            text-align: center;
+            font-style: italic;
+            margin-bottom: 40px;
+            color: var(--negro-logo);
+            font-size: 1rem;
+            line-height: 1.6;
+            max-width: 760px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .menu-item {
+            background-color: rgba(255, 255, 255, 0.4);
+            padding: 20px;
+            border-radius: 8px;
+            border-left: 4px solid var(--cafe-acento);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            gap: 15px;
+        }
+
+        .item-name {
+            font-family: var(--fuente-titulos);
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--negro-logo);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex: 1;
+        }
+
+        .item-price {
+            font-weight: 700;
+            color: var(--cafe-acento);
+            white-space: nowrap;
+            font-size: 1.1rem;
+            font-family: var(--fuente-texto);
+        }
+
+        .item-desc {
+            font-size: 0.95rem;
+            color: var(--negro-logo);
+            line-height: 1.5;
+            margin: 0;
+            opacity: 0.85;
+        }
+
+        .ornamento {
+            font-size: 2rem;
+            color: var(--cafe-acento);
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .back-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background-color: var(--cafe-acento);
+            color: var(--fondo-crema);
+            padding: 12px 24px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+            font-size: 0.9rem;
+            margin: 20px auto;
+            display: flex;
+            justify-content: center;
+            max-width: 250px;
+        }
+
+        .back-button:hover {
+            background-color: var(--negro-logo);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        .back-button::before {
+            content: '&larr;';
+            font-size: 1.2rem;
+        }
+
+        @media (min-width: 768px) {
+            .menu-grid {
+                grid-template-columns: 1fr 1fr;
+                column-gap: 30px;
+            }
+
+            .category-title {
+                font-size: 3.5rem;
+            }
+
+            .category-desc {
+                font-size: 1.1rem;
+            }
+
+            .item-name {
+                font-size: 1.35rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .menu-content {
+                padding: 30px 20px;
+            }
+
+            .category-title {
+                font-size: 2.2rem;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .item-price {
+                font-size: 1rem;
+            }
+
+            .menu-item {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
+
+    <div class="carta-menu">
+
+        <header>
+            <div class="welcome-script">Welcome</div>
+
+            <div class="logo-box">
+                <h1>Plaza Mexico</h1>
+            </div>
+
+            <div class="subtitle">Mexican Restaurant</div>
+        </header>
+
+        <nav class="navbar" role="navigation" aria-label="Navegacion principal">
+            <ul class="menu-principal">
+
+                <li class="dropdown">
+                    <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
+                    <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
+                        Menu
+                    </label>
+
+                    <ul class="dropdown-content" role="menu">
+                        <li role="none"><a href="appetizers.html" role="menuitem">Appetizers</a></li>
+                        <li role="none"><a href="carnes.html" role="menuitem">Carnes (Meat Dishes)</a></li>
+                        <li role="none"><a href="house.html" role="menuitem">House Specials</a></li>
+                        <li role="none"><a href="mariscos.html" role="menuitem">Mariscos (Seafood)</a></li>
+                        <li role="none"><a href="side-orders.html" role="menuitem">Side Orders</a></li>
+                        <li role="none"><a href="mexican-favorites.html" role="menuitem">Mexican Favorites</a></li>
+                        <li role="none"><a href="huevos-egg-dishes.html" role="menuitem">Huevos (Egg Dishes)</a></li>
+                        <li role="none"><a href="fajitas.html" role="menuitem">Fajitas</a></li>
+                        <li role="none"><a href="plaza.html#combinations" role="menuitem">Combinations</a></li>
+                        <li role="none"><a href="plaza.html#burritos" role="menuitem">Los Burritos</a></li>
+                        <li role="none"><a href="plaza.html#ensaladas" role="menuitem">Ensaladas</a></li>
+                        <li role="none"><a href="plaza.html#taco-salads" role="menuitem">Taco Salads</a></li>
+                        <li role="none"><a href="plaza.html#enchiladas" role="menuitem">Las Enchiladas</a></li>
+                        <li role="none"><a href="plaza.html#drinks" role="menuitem">Drink Menu</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <input type="checkbox" id="locations-toggle" class="dropdown-check" aria-hidden="true">
+                    <label for="locations-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
+                        Locations
+                    </label>
+
+                    <ul class="dropdown-content" role="menu">
+                        <li role="none">
+                            <a href="https://maps.app.goo.gl/Z8GrqYntGEDDN9YB9" role="menuitem">
+                                <strong>Mason City</strong>
+                                <br><small style="font-size: 0.85em; opacity: 0.8;">1809 S Federal Ave.</small>
+                            </a>
+                        </li>
+                        <li role="none">
+                            <a href="https://maps.app.goo.gl/yaeFAVvSrbWcsjjW9" role="menuitem">
+                                <strong>Charles City</strong>
+                                <br><small style="font-size: 0.85em; opacity: 0.8;">701 S. Grand Avenue</small>
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li><a href="index.html">Home</a></li>
+
+            </ul>
+        </nav>
+
+        <main id="main-content" class="menu-content">
+            <div class="ornamento">&#10059; &#10059; &#10059;</div>
+
+            <h2 class="category-title">Fajitas</h2>
+            <p class="category-subtitle">Served sizzling with fresh vegetables</p>
+            <p class="category-desc">
+                Your choice of steak, chicken strips or shrimp, marinated in our secret sauce, then delivered sizzling hot over a bed of sauteed onions and green peppers. Served with pico de gallo, sour cream, guacamole, rice, beans and tortillas.
+            </p>
+
+            <div class="menu-grid">
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Steak</span>
+                        <span class="item-price">$14.00</span>
+                    </div>
+                    <p class="item-desc">Classic steak fajitas served sizzling with onions and green peppers.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Chicken</span>
+                        <span class="item-price">$14.00</span>
+                    </div>
+                    <p class="item-desc">Tender chicken strip fajitas marinated in our house secret sauce.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Shrimp</span>
+                        <span class="item-price">$15.00</span>
+                    </div>
+                    <p class="item-desc">Juicy shrimp fajitas with sauteed onions and green peppers.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Combo: Any 2</span>
+                        <span class="item-price">$15.75</span>
+                    </div>
+                    <p class="item-desc">Pick any two proteins: steak, chicken or shrimp.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Trio Fajitas</span>
+                        <span class="item-price">$16.75</span>
+                    </div>
+                    <p class="item-desc">Chicken, steak and shrimp served together on one sizzling skillet.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Fajita Pueblo Viejo</span>
+                        <span class="item-price">$18.00</span>
+                    </div>
+                    <p class="item-desc">Steak, chicken, shrimp and chorizo for the full fajita experience.</p>
+                </div>
+
+            </div>
+            <div class="ornamento">&#10059; &#10059; &#10059;</div>
+
+            <a href="index.html" class="back-button">Back to Home</a>
+        </main>
+
+    </div>
+
+    <script>
+        document.querySelectorAll('.dropdown-check').forEach(checkbox => {
+            const label = checkbox.nextElementSibling;
+
+            checkbox.addEventListener('change', function() {
+                if (label) {
+                    label.setAttribute('aria-expanded', this.checked);
+                }
+            });
+
+            if (label) {
+                label.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        checkbox.click();
+                    }
+                });
+            }
+        });
+
+        if (window.innerWidth < 769) {
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.dropdown')) {
+                    document.querySelectorAll('.dropdown-check:checked').forEach(checkbox => {
+                        checkbox.checked = false;
+                        const label = checkbox.nextElementSibling;
+                        if (label) label.setAttribute('aria-expanded', 'false');
+                    });
+                }
+            });
+        }
+    </script>
+
+</body>
+
+</html>
