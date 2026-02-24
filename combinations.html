@@ -4,15 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fajitas Menu - Plaza Mexico Mexican Restaurant">
-    <title>Fajitas - Plaza Mexico</title>
+    <meta name="description" content="Combinations Menu - Plaza Mexico Mexican Restaurant">
+    <title>Combinations - Plaza Mexico</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Principal -->
     <link rel="stylesheet" href="resources/css/index.css">
 
     <style>
@@ -21,7 +19,7 @@
             max-width: 900px;
             margin: 0 auto;
         }
-
+        
         .category-title {
             font-family: var(--fuente-titulos);
             color: var(--cafe-acento);
@@ -32,7 +30,7 @@
             font-weight: 900;
             letter-spacing: 2px;
         }
-
+        
         .category-subtitle {
             text-align: center;
             font-style: italic;
@@ -41,7 +39,7 @@
             font-size: 1.1rem;
             opacity: 0.8;
         }
-
+        
         .category-desc {
             text-align: center;
             font-style: italic;
@@ -53,14 +51,14 @@
             margin-left: auto;
             margin-right: auto;
         }
-
+        
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
         }
-
+        
         .menu-item {
             background-color: rgba(255, 255, 255, 0.4);
             padding: 20px;
@@ -68,12 +66,12 @@
             border-left: 4px solid var(--cafe-acento);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-
+        
         .menu-item:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
         }
-
+        
         .item-header {
             display: flex;
             justify-content: space-between;
@@ -81,17 +79,17 @@
             margin-bottom: 10px;
             gap: 15px;
         }
-
+        
         .item-name {
             font-family: var(--fuente-titulos);
-            font-size: 1.25rem;
+            font-size: 1.15rem;
             font-weight: 700;
             color: var(--negro-logo);
             text-transform: uppercase;
             letter-spacing: 0.5px;
             flex: 1;
         }
-
+        
         .item-price {
             font-weight: 700;
             color: var(--cafe-acento);
@@ -99,22 +97,22 @@
             font-size: 1.1rem;
             font-family: var(--fuente-texto);
         }
-
+        
         .item-desc {
             font-size: 0.95rem;
             color: var(--negro-logo);
             line-height: 1.5;
             margin: 0;
-            opacity: 0.85;
+            opacity: 0.9;
         }
-
+        
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
             margin: 30px 0;
             text-align: center;
         }
-
+        
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -134,56 +132,46 @@
             justify-content: center;
             max-width: 250px;
         }
-
+        
         .back-button:hover {
             background-color: var(--negro-logo);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-
+        
         .back-button::before {
-            content: '&larr;';
-            font-size: 1.2rem;
+            content: '<-';
+            font-size: 1.1rem;
         }
-
+        
         @media (min-width: 768px) {
             .menu-grid {
                 grid-template-columns: 1fr 1fr;
                 column-gap: 30px;
             }
-
             .category-title {
                 font-size: 3.5rem;
             }
-
             .category-desc {
-                font-size: 1.1rem;
-            }
-
-            .item-name {
-                font-size: 1.35rem;
+                font-size: 1.08rem;
             }
         }
-
+        
         @media (max-width: 480px) {
             .menu-content {
                 padding: 30px 20px;
             }
-
             .category-title {
                 font-size: 2.2rem;
             }
-
             .item-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
             }
-
             .item-price {
                 font-size: 1rem;
             }
-
             .menu-item {
                 padding: 15px;
             }
@@ -198,17 +186,14 @@
 
         <header>
             <div class="welcome-script">Welcome</div>
-
             <div class="logo-box">
                 <h1>Plaza Mexico</h1>
             </div>
-
             <div class="subtitle">Mexican Restaurant</div>
         </header>
 
         <nav class="navbar" role="navigation" aria-label="Navegacion principal">
             <ul class="menu-principal">
-
                 <li class="dropdown">
                     <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -223,7 +208,7 @@
                         <li role="none"><a href="side-orders.html" role="menuitem">Side Orders</a></li>
                         <li role="none"><a href="mexican-favorites.html" role="menuitem">Mexican Favorites</a></li>
                         <li role="none"><a href="huevos-egg-dishes.html" role="menuitem">Huevos (Egg Dishes)</a></li>
-                        <li role="none"><a href="fajitas.html" role="menuitem">Fajitas</a></li>
+                        <li role="none"><a href="plaza.html#fajitas" role="menuitem">Fajitas</a></li>
                         <li role="none"><a href="combinations.html" role="menuitem">Combinations</a></li>
                         <li role="none"><a href="plaza.html#burritos" role="menuitem">Los Burritos</a></li>
                         <li role="none"><a href="plaza.html#ensaladas" role="menuitem">Ensaladas</a></li>
@@ -256,75 +241,85 @@
                 </li>
 
                 <li><a href="index.html">Home</a></li>
-
             </ul>
         </nav>
 
         <main id="main-content" class="menu-content">
-            <div class="ornamento">&#10059; &#10059; &#10059;</div>
+            <div class="ornamento">* * *</div>
 
-            <h2 class="category-title">Fajitas</h2>
-            <p class="category-subtitle">Served sizzling with fresh vegetables</p>
+            <h2 class="category-title">Combinations</h2>
+            <p class="category-subtitle">Classic Combination Plates</p>
             <p class="category-desc">
-                Your choice of steak, chicken strips or shrimp, marinated in our secret sauce, then delivered sizzling hot over a bed of sauteed onions and green peppers. Served with pico de gallo, sour cream, guacamole, rice, beans and tortillas.
-            </p>
+                All combinations, unless already noted come with your choice of chicken, beef, shredded beef, steak-add 2.00 <br> Chile Relleno prepared with cheese or your choice of chicken, beef or shredded beef.<br> All combinations served with both
+                rice and beans.<br> Cheese sauce topping to any combo-add 2.00<br>
 
-            <div class="menu-grid">
 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Steak</span>
-                        <span class="item-price">$14.00</span>
+                <div class="menu-grid">
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#1 Enchilada, Taco, Tostada</span><span class="item-price">$13.00</span></div>
                     </div>
-                    <p class="item-desc">Classic steak fajitas served sizzling with onions and green peppers.</p>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#2 Two Enchiladas and choice of Taco or Tostada</span><span class="item-price">$13.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#3 Chile Relleno with choice of Enchilada, Tostada or Tamale</span><span class="item-price">$13.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#4 Chimichanga with choice of Enchilada, Tostada or Guacamole</span><span class="item-price">$15.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#5 Two Pork Burritos</span><span class="item-price">$15.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#6 Pork Burrito and choice of Enchilada, Tostada or Chile Relleno</span><span class="item-price">$15.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#7 Beef Burrito and choice of Enchilada, Tostada or Chile Relleno</span><span class="item-price">$15.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#8 Two Chile Burritos in flour tortillas with guacamole</span><span class="item-price">$14.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#9 Cheeseburger and one taquito</span><span class="item-price">$14.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#10 Enchilada and one taquito</span><span class="item-price">$14.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#11 Chile Relleno and flour tortillas with guacamole</span><span class="item-price">$11.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#12 Chalupa, crispy flour tortilla with chicken, beef or shredded beef</span><span class="item-price">$11.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#13 Chile Relleno, one Enchilada and one Tostada</span><span class="item-price">$14.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#14 Chile Relleno, one Chimichanga and one Enchilada</span><span class="item-price">$18.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#15 Chile Relleno, one Burrito and grilled chicken breast</span><span class="item-price">$15.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#16 Six bacon wrapped shrimp, one grilled chicken breast, mushrooms</span><span class="item-price">$18.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#17 Six bacon wrapped shrimp, grilled chicken breast and burrito</span><span class="item-price">$18.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#18 Six bacon wrapped shrimp, grilled skirt steak and burrito</span><span class="item-price">$18.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#19 Six bacon wrapped shrimp, grilled skirt steak, burrito and rice</span><span class="item-price">$18.00</span></div>
+                    </div>
+                    <div class="menu-item">
+                        <div class="item-header"><span class="item-name">#20 Bacon wrapped shrimp plate</span><span class="item-price">$16.00</span></div>
+                    </div>
                 </div>
 
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Chicken</span>
-                        <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Tender chicken strip fajitas marinated in our house secret sauce.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Shrimp</span>
-                        <span class="item-price">$15.00</span>
-                    </div>
-                    <p class="item-desc">Juicy shrimp fajitas with sauteed onions and green peppers.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Combo: Any 2</span>
-                        <span class="item-price">$15.75</span>
-                    </div>
-                    <p class="item-desc">Pick any two proteins: steak, chicken or shrimp.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Trio Fajitas</span>
-                        <span class="item-price">$16.75</span>
-                    </div>
-                    <p class="item-desc">Chicken, steak and shrimp served together on one sizzling skillet.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Fajita Pueblo Viejo</span>
-                        <span class="item-price">$18.00</span>
-                    </div>
-                    <p class="item-desc">Steak, chicken, shrimp and chorizo for the full fajita experience.</p>
-                </div>
-
-            </div>
-            <div class="ornamento">&#10059; &#10059; &#10059;</div>
-
-            <a href="index.html" class="back-button">Back to Home</a>
+                <div class="ornamento">* * *</div>
+                <a href="index.html" class="back-button">Back to Home</a>
         </main>
-
     </div>
 
     <script>
@@ -359,7 +354,6 @@
             });
         }
     </script>
-
 </body>
 
 </html>
