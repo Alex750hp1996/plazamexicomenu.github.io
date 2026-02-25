@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Carnes (Meat Dishes) Menu - Plaza Mexico Mexican Restaurant">
-    <title>Carnes - Plaza Mexico</title>
+    <meta name="description" content="Los Burritos Menu - Plaza Mexico Mexican Restaurant">
+    <title>Los Burritos - Plaza Mexico</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,16 +16,12 @@
     <link rel="stylesheet" href="resources/css/index.css">
 
     <style>
-        /* ========================================
-           ESTILOS ESPECÍFICOS PARA PÁGINAS DE MENÚ
-           ======================================== */
-        
         .menu-content {
             padding: 40px 30px;
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .category-title {
             font-family: var(--fuente-titulos);
             color: var(--cafe-acento);
@@ -36,16 +32,16 @@
             font-weight: 900;
             letter-spacing: 2px;
         }
-        
+
         .category-subtitle {
             text-align: center;
             font-style: italic;
-            margin-bottom: 40px;
+            margin-bottom: 10px;
             color: var(--negro-logo);
             font-size: 1.1rem;
             opacity: 0.8;
         }
-        
+
         .category-desc {
             text-align: center;
             font-style: italic;
@@ -53,18 +49,18 @@
             color: var(--negro-logo);
             font-size: 1rem;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 760px;
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
         }
-        
+
         .menu-item {
             background-color: rgba(255, 255, 255, 0.4);
             padding: 20px;
@@ -72,12 +68,12 @@
             border-left: 4px solid var(--cafe-acento);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .menu-item:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
         }
-        
+
         .item-header {
             display: flex;
             justify-content: space-between;
@@ -85,7 +81,7 @@
             margin-bottom: 10px;
             gap: 15px;
         }
-        
+
         .item-name {
             font-family: var(--fuente-titulos);
             font-size: 1.25rem;
@@ -95,7 +91,7 @@
             letter-spacing: 0.5px;
             flex: 1;
         }
-        
+
         .item-price {
             font-weight: 700;
             color: var(--cafe-acento);
@@ -103,7 +99,7 @@
             font-size: 1.1rem;
             font-family: var(--fuente-texto);
         }
-        
+
         .item-desc {
             font-size: 0.95rem;
             color: var(--negro-logo);
@@ -111,16 +107,14 @@
             margin: 0;
             opacity: 0.85;
         }
-        /* Decoración */
-        
+
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
             margin: 30px 0;
             text-align: center;
         }
-        /* Botón de regreso mejorado */
-        
+
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -140,51 +134,56 @@
             justify-content: center;
             max-width: 250px;
         }
-        
+
         .back-button:hover {
             background-color: var(--negro-logo);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .back-button::before {
-            content: '←';
+            content: '&larr;';
             font-size: 1.2rem;
         }
-        /* Responsive - Tablet y Desktop */
-        
+
         @media (min-width: 768px) {
             .menu-grid {
                 grid-template-columns: 1fr 1fr;
                 column-gap: 30px;
             }
+
             .category-title {
                 font-size: 3.5rem;
             }
+
             .category-desc {
                 font-size: 1.1rem;
             }
+
             .item-name {
                 font-size: 1.35rem;
             }
         }
-        /* Responsive - Móviles pequeños */
-        
+
         @media (max-width: 480px) {
             .menu-content {
                 padding: 30px 20px;
             }
+
             .category-title {
                 font-size: 2.2rem;
             }
+
             .item-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
             }
+
             .item-price {
                 font-size: 1rem;
             }
+
             .menu-item {
                 padding: 15px;
             }
@@ -193,7 +192,6 @@
 </head>
 
 <body>
-    <!-- Skip link para accesibilidad -->
     <a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
     <div class="carta-menu">
@@ -208,10 +206,9 @@
             <div class="subtitle">Mexican Restaurant</div>
         </header>
 
-        <nav class="navbar" role="navigation" aria-label="Navegación principal">
+        <nav class="navbar" role="navigation" aria-label="Navegacion principal">
             <ul class="menu-principal">
 
-                <!-- MENÚ DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -236,7 +233,6 @@
                     </ul>
                 </li>
 
-                <!-- LOCATIONS DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="locations-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="locations-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -259,119 +255,129 @@
                     </ul>
                 </li>
 
-                <!-- HOME LINK -->
                 <li><a href="index.html">Home</a></li>
 
             </ul>
         </nav>
 
         <main id="main-content" class="menu-content">
-            <div class="ornamento">❋ ❋ ❋</div>
+            <div class="ornamento">&#10059; &#10059; &#10059;</div>
 
-            <h2 class="category-title">Carnes</h2>
-            <p class="category-subtitle">(Meat Dishes)</p>
+            <h2 class="category-title">Los Burritos</h2>
+            <p class="category-subtitle">House Burrito Selection</p>
+            <p class="category-desc">
+                All burritos are topped with salad and served with rice and beans.
+                Add cheese dip for $2.00.
+            </p>
 
             <div class="menu-grid">
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Carne Asada</span>
+                        <span class="item-name">Bean and Beef Burrito</span>
+                        <span class="item-price">$12.00</span>
+                    </div>
+                    <p class="item-desc">Ground beef and beans stuffed in a large flour tortilla, topped with burrito sauce and cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Picadillo</span>
+                        <span class="item-price">$12.00</span>
+                    </div>
+                    <p class="item-desc">Shredded beef with vegetables rolled in a flour tortilla, topped with burrito sauce and cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito de Pollo</span>
+                        <span class="item-price">$12.00</span>
+                    </div>
+                    <p class="item-desc">Tender shredded chicken rolled in a flour tortilla, topped with burrito sauce and cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Verde</span>
+                        <span class="item-price">$13.00</span>
+                    </div>
+                    <p class="item-desc">Chunks of pork in a light green chile tomatillo sauce, rolled in a flour tortilla and topped with cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Jalisco</span>
+                        <span class="item-price">$16.00</span>
+                    </div>
+                    <p class="item-desc">Chorizo, rice, beans, grilled onion, bell pepper and tomato rolled in a flour tortilla, topped with cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Colorado</span>
+                        <span class="item-price">$13.00</span>
+                    </div>
+                    <p class="item-desc">Tender chunks of steak rolled in a flour tortilla, topped with our Colorado sauce and cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito de Fajitas</span>
+                        <span class="item-price">$16.00</span>
+                    </div>
+                    <p class="item-desc">Flour tortilla stuffed with your choice of grilled chicken, steak or shrimp with onions and bell peppers, topped with cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito de Fajitas Trio</span>
+                        <span class="item-price">$17.00</span>
+                    </div>
+                    <p class="item-desc">Large flour tortilla stuffed with chicken, steak and shrimp with onion and pepper, topped with cheese.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Relleno</span>
+                        <span class="item-price">$16.00</span>
+                    </div>
+                    <p class="item-desc">Flour tortilla filled with seasoned chicken, steak or shrimp, smothered in cheese sauce.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Expresso Burrito</span>
+                        <span class="item-price">$13.00</span>
+                    </div>
+                    <p class="item-desc">Grande burrito filled with pork, rice, beans and special sauce, topped with burrito sauce, cheese, lettuce and cheese sauce.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Mexicanos</span>
+                        <span class="item-price">$18.50</span>
+                    </div>
+                    <p class="item-desc">Two flour tortillas rolled with skirt steak, chorizo, onions, bell pepper and cheese sauce. Serves two.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Asada</span>
+                        <span class="item-price">$14.00</span>
+                    </div>
+                    <p class="item-desc">Flour tortilla filled with skirt steak, topped with cheese sauce, served with rice and beans.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Burrito Plaza Mexico</span>
                         <span class="item-price">$18.00</span>
                     </div>
-                    <p class="item-desc">Slices of skirt steak cooked over charcoal. Served with pico de gallo and guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Steak Jalisco</span>
-                        <span class="item-price">$18.00</span>
-                    </div>
-                    <p class="item-desc">Choice steak seasoned and grilled.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Carnitas De Res</span>
-                        <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Tender beef and onion strips cooked with green pepper and onions. Served with guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Chile Verde</span>
-                        <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Chunks of pork cooked with a light tomatillo sauce and spices.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Chile Colorado</span>
-                        <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Chunks of beef cooked in a tasty mild chile sauce.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Carne Asada & More</span>
-                        <span class="item-price">$20.00</span>
-                    </div>
-                    <p class="item-desc">Slices of skirt steak cooked over charcoal, with choice of Chile Relleno, Enchilada or Tamale. Served with pico de gallo and guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">New Mexico</span>
-                        <span class="item-price">$22.00</span>
-                    </div>
-                    <p class="item-desc">9oz. Carne Asada, 3 oz. shrimp, 3 oz. scallops and mushrooms sautéed with butter, garlic and spices. Served with guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Steak Ranchero</span>
-                        <span class="item-price">$19.00</span>
-                    </div>
-                    <p class="item-desc">T-bone steak marinated and broiled. Sautéed with bell pepper, tomato, and onions. Served with guacamole.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Plaza Mexico</span>
-                        <span class="item-price">$22.00</span>
-                    </div>
-                    <p class="item-desc">12 shrimp wrapped in bacon with 5 oz. Carne Asada, served with rice and beans and Pico de Gallo.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Grande</span>
-                        <span class="item-price">$22.00</span>
-                    </div>
-                    <p class="item-desc">Grilled chicken breast, Skirt Steak and 6 shrimp wrapped in bacon with a garden salad. Served with rice and beans and Pico de Gallo.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">El Mezquite Grill</span>
-                        <span class="item-price">$26.00</span>
-                    </div>
-                    <p class="item-desc">12 shrimp wrapped in bacon with 12 oz. grilled T-bone Steak served with rice and beans and Pico de Gallo.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Steak Vallarta</span>
-                        <span class="item-price">$22.00</span>
-                    </div>
-                    <p class="item-desc">T-Bone Steak and 6 shrimp, sautéed bell pepper, onion, tomatoes and mushrooms. Served with rice and beans and Pico de Gallo.</p>
+                    <p class="item-desc">Two flour tortillas stuffed with grilled onions and green peppers, mixed with your choice of chicken, steak or shrimp, topped with cheese sauce.</p>
                 </div>
 
             </div>
-
-            <div class="ornamento">❋ ❋ ❋</div>
+            <div class="ornamento">&#10059; &#10059; &#10059;</div>
 
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
@@ -379,7 +385,6 @@
     </div>
 
     <script>
-        // Mejora de accesibilidad: sincronizar aria-expanded con checkboxes
         document.querySelectorAll('.dropdown-check').forEach(checkbox => {
             const label = checkbox.nextElementSibling;
 
@@ -389,7 +394,6 @@
                 }
             });
 
-            // Permitir activación con Enter/Space en el label
             if (label) {
                 label.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -400,7 +404,6 @@
             }
         });
 
-        // Cerrar dropdowns al hacer clic fuera (solo móvil)
         if (window.innerWidth < 769) {
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.dropdown')) {
@@ -417,4 +420,3 @@
 </body>
 
 </html>
-

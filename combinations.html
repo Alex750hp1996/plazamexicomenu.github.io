@@ -52,41 +52,29 @@
             margin-right: auto;
         }
         
-        .menu-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 30px;
+        .menu-list {
+            list-style: none;
+            margin: 30px 0 0;
+            padding: 0;
+            border-top: 1px solid rgba(74, 44, 42, 0.2);
         }
-        
+
         .menu-item {
-            background-color: rgba(255, 255, 255, 0.4);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--cafe-acento);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
-        }
-        
-        .menu-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
-        }
-        
-        .item-header {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 10px;
-            gap: 15px;
+            gap: 16px;
+            padding: 14px 0;
+            border-bottom: 1px solid rgba(74, 44, 42, 0.2);
         }
         
         .item-name {
             font-family: var(--fuente-titulos);
-            font-size: 1.15rem;
+            font-size: 1.05rem;
             font-weight: 700;
             color: var(--negro-logo);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            text-transform: none;
+            letter-spacing: 0;
             flex: 1;
         }
         
@@ -96,14 +84,6 @@
             white-space: nowrap;
             font-size: 1.1rem;
             font-family: var(--fuente-texto);
-        }
-        
-        .item-desc {
-            font-size: 0.95rem;
-            color: var(--negro-logo);
-            line-height: 1.5;
-            margin: 0;
-            opacity: 0.9;
         }
         
         .ornamento {
@@ -145,10 +125,6 @@
         }
         
         @media (min-width: 768px) {
-            .menu-grid {
-                grid-template-columns: 1fr 1fr;
-                column-gap: 30px;
-            }
             .category-title {
                 font-size: 3.5rem;
             }
@@ -164,16 +140,13 @@
             .category-title {
                 font-size: 2.2rem;
             }
-            .item-header {
+            .menu-item {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 5px;
+                gap: 4px;
             }
             .item-price {
                 font-size: 1rem;
-            }
-            .menu-item {
-                padding: 15px;
             }
         }
     </style>
@@ -208,9 +181,9 @@
                         <li role="none"><a href="side-orders.html" role="menuitem">Side Orders</a></li>
                         <li role="none"><a href="mexican-favorites.html" role="menuitem">Mexican Favorites</a></li>
                         <li role="none"><a href="huevos-egg-dishes.html" role="menuitem">Huevos (Egg Dishes)</a></li>
-                        <li role="none"><a href="plaza.html#fajitas" role="menuitem">Fajitas</a></li>
+                        <li role="none"><a href="fajitas.html" role="menuitem">Fajitas</a></li>
                         <li role="none"><a href="combinations.html" role="menuitem">Combinations</a></li>
-                        <li role="none"><a href="plaza.html#burritos" role="menuitem">Los Burritos</a></li>
+                        <li role="none"><a href="burritos.html" role="menuitem">Los Burritos</a></li>
                         <li role="none"><a href="plaza.html#ensaladas" role="menuitem">Ensaladas</a></li>
                         <li role="none"><a href="plaza.html#taco-salads" role="menuitem">Taco Salads</a></li>
                         <li role="none"><a href="plaza.html#enchiladas" role="menuitem">Las Enchiladas</a></li>
@@ -252,73 +225,33 @@
             <p class="category-desc">
                 All combinations, unless already noted come with your choice of chicken, beef, shredded beef, steak-add 2.00 <br> Chile Relleno prepared with cheese or your choice of chicken, beef or shredded beef.<br> All combinations served with both
                 rice and beans.<br> Cheese sauce topping to any combo-add 2.00<br>
+            </p>
 
+            <ul class="menu-list" aria-label="Lista de combinaciones">
+                    <li class="menu-item"><span class="item-name">#1 Enchilada, Taco, Tostada</span><span class="item-price">$13.00</span></li>
+                    <li class="menu-item"><span class="item-name">#2 Two Enchiladas and choice of Taco or Tostada</span><span class="item-price">$13.00</span></li>
+                    <li class="menu-item"><span class="item-name">#3 Chile Relleno with choice of Enchilada, Tostada or Tamale</span><span class="item-price">$13.00</span></li>
+                    <li class="menu-item"><span class="item-name">#4 Chimichanga with choice of Enchilada, Tostada or Guacamole</span><span class="item-price">$15.00</span></li>
+                    <li class="menu-item"><span class="item-name">#5 Two Pork Burritos</span><span class="item-price">$15.00</span></li>
+                    <li class="menu-item"><span class="item-name">#6 Pork Burrito and choice of Enchilada, Tostada or Chile Relleno</span><span class="item-price">$15.00</span></li>
+                    <li class="menu-item"><span class="item-name">#7 Beef Burrito and choice of Enchilada, Tostada or Chile Relleno</span><span class="item-price">$15.00</span></li>
+                    <li class="menu-item"><span class="item-name">#8 Two Chile Burritos in flour tortillas with guacamole</span><span class="item-price">$14.00</span></li>
+                    <li class="menu-item"><span class="item-name">#9 Cheeseburger and one taquito</span><span class="item-price">$14.00</span></li>
+                    <li class="menu-item"><span class="item-name">#10 Enchilada and one taquito</span><span class="item-price">$14.00</span></li>
+                    <li class="menu-item"><span class="item-name">#11 Chile Relleno and flour tortillas with guacamole</span><span class="item-price">$11.00</span></li>
+                    <li class="menu-item"><span class="item-name">#12 Chalupa, crispy flour tortilla with chicken, beef or shredded beef</span><span class="item-price">$11.00</span></li>
+                    <li class="menu-item"><span class="item-name">#13 Chile Relleno, one Enchilada and one Tostada</span><span class="item-price">$14.00</span></li>
+                    <li class="menu-item"><span class="item-name">#14 Chile Relleno, one Chimichanga and one Enchilada</span><span class="item-price">$18.00</span></li>
+                    <li class="menu-item"><span class="item-name">#15 Chile Relleno, one Burrito and grilled chicken breast</span><span class="item-price">$15.00</span></li>
+                    <li class="menu-item"><span class="item-name">#16 Six bacon wrapped shrimp, one grilled chicken breast, mushrooms</span><span class="item-price">$18.00</span></li>
+                    <li class="menu-item"><span class="item-name">#17 Six bacon wrapped shrimp, grilled chicken breast and burrito</span><span class="item-price">$18.00</span></li>
+                    <li class="menu-item"><span class="item-name">#18 Six bacon wrapped shrimp, grilled skirt steak and burrito</span><span class="item-price">$18.00</span></li>
+                    <li class="menu-item"><span class="item-name">#19 Six bacon wrapped shrimp, grilled skirt steak, burrito and rice</span><span class="item-price">$18.00</span></li>
+                    <li class="menu-item"><span class="item-name">#20 Bacon wrapped shrimp plate</span><span class="item-price">$16.00</span></li>
+            </ul>
 
-                <div class="menu-grid">
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#1 Enchilada, Taco, Tostada</span><span class="item-price">$13.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#2 Two Enchiladas and choice of Taco or Tostada</span><span class="item-price">$13.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#3 Chile Relleno with choice of Enchilada, Tostada or Tamale</span><span class="item-price">$13.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#4 Chimichanga with choice of Enchilada, Tostada or Guacamole</span><span class="item-price">$15.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#5 Two Pork Burritos</span><span class="item-price">$15.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#6 Pork Burrito and choice of Enchilada, Tostada or Chile Relleno</span><span class="item-price">$15.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#7 Beef Burrito and choice of Enchilada, Tostada or Chile Relleno</span><span class="item-price">$15.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#8 Two Chile Burritos in flour tortillas with guacamole</span><span class="item-price">$14.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#9 Cheeseburger and one taquito</span><span class="item-price">$14.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#10 Enchilada and one taquito</span><span class="item-price">$14.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#11 Chile Relleno and flour tortillas with guacamole</span><span class="item-price">$11.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#12 Chalupa, crispy flour tortilla with chicken, beef or shredded beef</span><span class="item-price">$11.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#13 Chile Relleno, one Enchilada and one Tostada</span><span class="item-price">$14.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#14 Chile Relleno, one Chimichanga and one Enchilada</span><span class="item-price">$18.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#15 Chile Relleno, one Burrito and grilled chicken breast</span><span class="item-price">$15.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#16 Six bacon wrapped shrimp, one grilled chicken breast, mushrooms</span><span class="item-price">$18.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#17 Six bacon wrapped shrimp, grilled chicken breast and burrito</span><span class="item-price">$18.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#18 Six bacon wrapped shrimp, grilled skirt steak and burrito</span><span class="item-price">$18.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#19 Six bacon wrapped shrimp, grilled skirt steak, burrito and rice</span><span class="item-price">$18.00</span></div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="item-header"><span class="item-name">#20 Bacon wrapped shrimp plate</span><span class="item-price">$16.00</span></div>
-                    </div>
-                </div>
-
-                <div class="ornamento">* * *</div>
-                <a href="index.html" class="back-button">Back to Home</a>
+            <div class="ornamento">* * *</div>
+            <a href="index.html" class="back-button">Back to Home</a>
         </main>
     </div>
 
