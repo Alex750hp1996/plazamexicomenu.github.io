@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="House Specials Menu - Plaza Mexico Mexican Restaurant">
-    <title>House Specials - Plaza Mexico</title>
+    <meta name="description" content="Las Enchiladas Menu - Plaza Mexico Mexican Restaurant">
+    <title>Las Enchiladas - Plaza Mexico</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,16 +16,12 @@
     <link rel="stylesheet" href="resources/css/index.css">
 
     <style>
-        /* ========================================
-           ESTILOS ESPEC�FICOS PARA P�GINAS DE MEN�
-           ======================================== */
-        
         .menu-content {
             padding: 40px 30px;
             max-width: 900px;
             margin: 0 auto;
         }
-        
+
         .category-title {
             font-family: var(--fuente-titulos);
             color: var(--cafe-acento);
@@ -36,7 +32,7 @@
             font-weight: 900;
             letter-spacing: 2px;
         }
-        
+
         .category-subtitle {
             text-align: center;
             font-style: italic;
@@ -45,7 +41,7 @@
             font-size: 1.1rem;
             opacity: 0.8;
         }
-        
+
         .category-desc {
             text-align: center;
             font-style: italic;
@@ -53,18 +49,18 @@
             color: var(--negro-logo);
             font-size: 1rem;
             line-height: 1.6;
-            max-width: 700px;
+            max-width: 760px;
             margin-left: auto;
             margin-right: auto;
         }
-        
+
         .menu-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
         }
-        
+
         .menu-item {
             background-color: rgba(255, 255, 255, 0.4);
             padding: 20px;
@@ -72,12 +68,12 @@
             border-left: 4px solid var(--cafe-acento);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
-        
+
         .menu-item:hover {
             transform: translateX(5px);
             box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
         }
-        
+
         .item-header {
             display: flex;
             justify-content: space-between;
@@ -85,7 +81,7 @@
             margin-bottom: 10px;
             gap: 15px;
         }
-        
+
         .item-name {
             font-family: var(--fuente-titulos);
             font-size: 1.25rem;
@@ -95,7 +91,7 @@
             letter-spacing: 0.5px;
             flex: 1;
         }
-        
+
         .item-price {
             font-weight: 700;
             color: var(--cafe-acento);
@@ -103,7 +99,7 @@
             font-size: 1.1rem;
             font-family: var(--fuente-texto);
         }
-        
+
         .item-desc {
             font-size: 0.95rem;
             color: var(--negro-logo);
@@ -111,16 +107,14 @@
             margin: 0;
             opacity: 0.85;
         }
-        /* Decoraci�n */
-        
+
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
             margin: 30px 0;
             text-align: center;
         }
-        /* Bot�n de regreso mejorado */
-        
+
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -140,51 +134,56 @@
             justify-content: center;
             max-width: 250px;
         }
-        
+
         .back-button:hover {
             background-color: var(--negro-logo);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-        
+
         .back-button::before {
-            content: '&larr;';
+            content: '\2190';
             font-size: 1.2rem;
         }
-        /* Responsive - Tablet y Desktop */
-        
+
         @media (min-width: 768px) {
             .menu-grid {
                 grid-template-columns: 1fr 1fr;
                 column-gap: 30px;
             }
+
             .category-title {
                 font-size: 3.5rem;
             }
+
             .category-desc {
                 font-size: 1.1rem;
             }
+
             .item-name {
                 font-size: 1.35rem;
             }
         }
-        /* Responsive - M�viles peque�os */
-        
+
         @media (max-width: 480px) {
             .menu-content {
                 padding: 30px 20px;
             }
+
             .category-title {
                 font-size: 2.2rem;
             }
+
             .item-header {
                 flex-direction: column;
                 align-items: flex-start;
                 gap: 5px;
             }
+
             .item-price {
                 font-size: 1rem;
             }
+
             .menu-item {
                 padding: 15px;
             }
@@ -208,10 +207,10 @@
             <div class="subtitle">Mexican Restaurant</div>
         </header>
 
-        <nav class="navbar" role="navigation" aria-label="Navegaci�n principal">
+        <nav class="navbar" role="navigation" aria-label="Navegacion principal">
             <ul class="menu-principal">
 
-                <!-- MEN� DROPDOWN -->
+                <!-- MENU DROPDOWN -->
                 <li class="dropdown">
                     <input type="checkbox" id="menu-toggle" class="dropdown-check" aria-hidden="true">
                     <label for="menu-toggle" class="dropbtn" tabindex="0" role="button" aria-expanded="false" aria-haspopup="true">
@@ -266,91 +265,89 @@
         </nav>
 
         <main id="main-content" class="menu-content">
-            <div class="ornamento">&#10059; &#10059; &#10059;</div>
+            <div class="ornamento">&#10027; &#10027; &#10027;</div>
 
-            <h2 class="category-title">House Specials</h2>
-            <p class="category-subtitle">Pollo (Chicken Dishes)</p>
-            <p class="category-desc">
-                All house specials dinners served with rice, beans and tortillas.<br> Cooked with butter and spices.
-            </p>
+            <h2 class="category-title">Las Enchiladas</h2>
+            <p class="category-subtitle">All enchilada dishes served with rice and beans.</p>
+            <p class="category-desc">Add Cheese Sauce for $2.00.</p>
 
             <div class="menu-grid">
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Chicken Carnitas</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Cheese & Onion Enchilada</span>
+                        <span class="item-price">2 enchiladas $10.00 | 1 enchilada $8.00</span>
                     </div>
-                    <p class="item-desc">Chicken breast chunks cooked with green peppers and onion. Served with guacamole.</p>
+                    <p class="item-desc">2 corn tortillas filled with cheese and onions, topped with a special enchilada sauce and melted cheese.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Chicken En Mole</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Chicken Enchilada</span>
+                        <span class="item-price">2 enchiladas $10.00 | 1 enchilada $8.00</span>
                     </div>
-                    <p class="item-desc">Boneless chicken in a delicious, sweet, spicy Mexican sauce.</p>
+                    <p class="item-desc">Tender pieces of chicken rolled up into two corn tortillas, covered with enchilada sauce and melted cheese.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo ala Crema</span>
-                        <span class="item-price">$15.00</span>
+                        <span class="item-name">Enchilada Picadillo</span>
+                        <span class="item-price">2 enchiladas $10.00 | 1 enchilada $8.00</span>
                     </div>
-                    <p class="item-desc">Boneless chicken cooked in a delicious parmesan cheese cream sauce.</p>
+                    <p class="item-desc">2 corn tortillas stuffed with lightly spiced shredded beef covered with enchilada sauce and melted cheese.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Loco</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Beef Enchilada</span>
+                        <span class="item-price">2 enchiladas $10.00 | 1 enchilada $8.00</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken saut�ed in special red sauce with green peppers and onion. Served on a bed of rice with melted Monterey Jack cheese.</p>
+                    <p class="item-desc">2 corn tortillas filled with delicious seasoned ground beef and topped with enchilada sauce and melted cheese.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Asado</span>
-                        <span class="item-price">$16.00</span>
+                        <span class="item-name">Enchilada Suiza</span>
+                        <span class="item-price">2 enchiladas $11.00 | 1 enchilada $9.00</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken marinated and grilled. Served with sour cream and guacamole.</p>
+                    <p class="item-desc">2 corn tortillas stuffed with your choice of filling, topped with a delicious green tomatillo sauce and melted cheese. Garnished with sour cream.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Arroz Con Pollo</span>
-                        <span class="item-price">$14.00</span>
+                        <span class="item-name">Enchilada Sunrise</span>
+                        <span class="item-price">2 enchiladas $12.00 | 1 enchilada $10.00</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken saut�ed in a special sauce with mushroom. Served over a bed of rice with melted Monterey Jack cheese. Not served with beans.</p>
+                    <p class="item-desc">Same as your favorite enchiladas, except the enchiladas are also topped with eggs over-easy.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Pollo Fundido</span>
-                        <span class="item-price">$16.00</span>
+                        <span class="item-name">Mole Enchilada</span>
+                        <span class="item-price">2 enchiladas $11.00 | 1 enchilada $9.00</span>
                     </div>
-                    <p class="item-desc">Grilled chicken breast rolled in a flour tortilla. Topped with mild cheese sauce.</p>
+                    <p class="item-desc">2 corn tortillas stuffed with tender chunk chicken, topped with a delicious sweet and spicy Mexican sauce.</p>
                 </div>
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Chori Pollo</span>
-                        <span class="item-price">$16.00</span>
-                    </div>
-                    <p class="item-desc">Chunks of chicken breast with chorizo and rice. Covered with cheese sauce and green onions.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Pollo Ala Diabla</span>
+                        <span class="item-name">Trio Enchiladas</span>
                         <span class="item-price">$13.00</span>
                     </div>
-                    <p class="item-desc">Boneless breast of chicken and mushrooms saut�ed in a spicy red hot sauce.</p>
+                    <p class="item-desc">3 corn tortillas stuffed with flavorful chicken, ground or shredded beef, topped with melted cheese and enchilada sauce.</p>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-header">
+                        <span class="item-name">Enchilada Ranchera</span>
+                        <span class="item-price">2 enchiladas $12.00 | 1 enchilada $10.00</span>
+                    </div>
+                    <p class="item-desc">2 corn tortillas filled with your choice of chicken, picadillo, ground beef or cheese. Topped with a new, exciting ranchera sauce and garnished with sour cream.</p>
                 </div>
 
             </div>
 
-            <div class="ornamento">&#10059; &#10059; &#10059;</div>
+            <div class="ornamento">&#10027; &#10027; &#10027;</div>
 
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
@@ -358,7 +355,6 @@
     </div>
 
     <script>
-        // Mejora de accesibilidad: sincronizar aria-expanded con checkboxes
         document.querySelectorAll('.dropdown-check').forEach(checkbox => {
             const label = checkbox.nextElementSibling;
 
@@ -368,7 +364,6 @@
                 }
             });
 
-            // Permitir activaci�n con Enter/Space en el label
             if (label) {
                 label.addEventListener('keydown', function(e) {
                     if (e.key === 'Enter' || e.key === ' ') {
@@ -379,7 +374,6 @@
             }
         });
 
-        // Cerrar dropdowns al hacer clic fuera (solo m�vil)
         if (window.innerWidth < 769) {
             document.addEventListener('click', function(e) {
                 if (!e.target.closest('.dropdown')) {
@@ -396,6 +390,3 @@
 </body>
 
 </html>
-
-
-
