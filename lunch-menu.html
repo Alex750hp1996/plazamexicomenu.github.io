@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Taco Salads Menu - Plaza Mexico Mexican Restaurant">
-    <title>Taco Salads - Plaza Mexico</title>
+    <meta name="description" content="Lunch Menu - Plaza Mexico Mexican Restaurant">
+    <title>Lunch Menu - Plaza Mexico</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,101 +15,138 @@
 
     <style>
         .menu-content {
-            padding: 40px 30px;
-            max-width: 900px;
+            padding: 34px 24px 40px;
+            max-width: 980px;
             margin: 0 auto;
         }
 
-        .category-title {
-            font-family: var(--fuente-titulos);
-            color: var(--cafe-acento);
-            font-size: 2.8rem;
-            text-align: center;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 2px;
+        .menu-sheet {
+            background: rgba(255, 255, 255, 0.34);
+            border: 1px solid rgba(74, 44, 42, 0.18);
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(74, 44, 42, 0.1);
+            padding: 28px 24px 30px;
         }
 
-        .category-subtitle {
+        .lunch-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 8vw, 5.4rem);
+            line-height: 1;
             text-align: center;
-            font-style: italic;
-            margin-bottom: 10px;
             color: var(--negro-logo);
-            font-size: 1.1rem;
-            opacity: 0.8;
+            margin-bottom: 14px;
+            font-weight: 400;
         }
 
-        .category-desc {
+        .rule {
+            border: 0;
+            height: 1px;
+            background: rgba(74, 44, 42, 0.5);
+            margin: 0 0 16px;
+        }
+
+        .service-note {
             text-align: center;
-            font-style: italic;
-            margin-bottom: 40px;
+            margin: 0 auto 20px;
+            max-width: 860px;
+            font-size: 1.04rem;
+            line-height: 1.5;
             color: var(--negro-logo);
-            font-size: 1rem;
-            line-height: 1.6;
-            max-width: 760px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
-        .menu-grid {
+        .service-note strong {
+            font-weight: 700;
+        }
+
+        .lunch-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 30px;
+            gap: 24px;
+            margin-top: 8px;
         }
 
-        .menu-item {
-            background-color: rgba(255, 255, 255, 0.4);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--cafe-acento);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .section-title {
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(2.3rem, 6vw, 3.3rem);
+            font-weight: 400;
+            color: var(--negro-logo);
+            margin: 0 0 4px;
+            line-height: 1;
         }
 
-        .menu-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
+        .section-subtitle {
+            margin: 0 0 6px;
+            font-size: 1.08rem;
+            color: var(--negro-logo);
         }
 
-        .item-header {
+        .section-note {
+            margin: 0 0 16px;
+            font-size: 1rem;
+            color: var(--negro-logo);
+            opacity: 0.88;
+            line-height: 1.45;
+        }
+
+        .combo-list {
+            list-style: decimal;
+            margin: 0;
+            padding-left: 30px;
+        }
+
+        .combo-list li {
+            margin: 7px 0;
+            padding-left: 8px;
+        }
+
+        .line-item {
             display: flex;
-            justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 10px;
-            gap: 15px;
+            justify-content: space-between;
+            gap: 14px;
         }
 
         .item-name {
             font-family: var(--fuente-titulos);
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.82rem;
             color: var(--negro-logo);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            flex: 1;
+            line-height: 1.1;
+        }
+
+        .item-name small {
+            font-family: var(--fuente-texto);
+            font-size: 0.62em;
+            font-weight: 400;
+            opacity: 0.92;
         }
 
         .item-price {
-            font-weight: 700;
-            color: var(--cafe-acento);
+            font-family: var(--fuente-titulos);
+            font-size: 2rem;
+            color: var(--negro-logo);
             white-space: nowrap;
-            font-size: 1.1rem;
-            font-family: var(--fuente-texto);
+            line-height: 1;
         }
 
-        .item-desc {
-            font-size: 0.95rem;
-            color: var(--negro-logo);
-            line-height: 1.5;
-            margin: 0;
-            opacity: 0.85;
+        .taco-list {
+            list-style: none;
+            margin: 18px 0 0;
+            padding: 0;
+        }
+
+        .taco-list li {
+            margin: 7px 0;
+        }
+
+        .taco-list .item-name,
+        .taco-list .item-price {
+            font-size: 2rem;
         }
 
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
-            margin: 30px 0;
+            margin: 24px 0 10px;
             text-align: center;
         }
 
@@ -127,7 +164,7 @@
             border-radius: 5px;
             transition: all 0.3s ease;
             font-size: 0.9rem;
-            margin: 20px auto;
+            margin: 18px auto 0;
             display: flex;
             justify-content: center;
             max-width: 250px;
@@ -140,50 +177,50 @@
         }
 
         .back-button::before {
-            content: '&larr;';
+            content: '\2190';
             font-size: 1.2rem;
         }
 
-        @media (min-width: 768px) {
-            .menu-grid {
-                grid-template-columns: 1fr 1fr;
-                column-gap: 30px;
+        @media (min-width: 900px) {
+            .menu-sheet {
+                padding: 32px 28px 34px;
             }
 
-            .category-title {
-                font-size: 3.5rem;
+            .lunch-grid {
+                grid-template-columns: 1.4fr 1fr;
+                gap: 34px;
+                align-items: start;
             }
 
-            .category-desc {
-                font-size: 1.1rem;
-            }
-
-            .item-name {
-                font-size: 1.35rem;
+            .section-right {
+                padding-top: 84px;
             }
         }
 
-        @media (max-width: 480px) {
+        @media (max-width: 700px) {
             .menu-content {
-                padding: 30px 20px;
+                padding: 28px 16px 34px;
             }
 
-            .category-title {
-                font-size: 2.2rem;
+            .menu-sheet {
+                padding: 22px 16px 24px;
             }
 
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
+            .combo-list {
+                padding-left: 24px;
+            }
+
+            .item-name {
+                font-size: 1.48rem;
             }
 
             .item-price {
-                font-size: 1rem;
+                font-size: 1.7rem;
             }
 
-            .menu-item {
-                padding: 15px;
+            .taco-list .item-name,
+            .taco-list .item-price {
+                font-size: 1.78rem;
             }
         }
     </style>
@@ -261,42 +298,77 @@
         </nav>
 
         <main id="main-content" class="menu-content">
+            <section class="menu-sheet" aria-labelledby="lunch-title">
+                <h2 id="lunch-title" class="lunch-title">Lunch Menu</h2>
+                <hr class="rule">
+
+                <p class="service-note">
+                    Lunch is served <strong>Monday-Saturday 11:00 a.m. to 3:00 p.m.</strong><br>
+                    Please choose from these lunch specials below or enjoy any item from our dinner menu.
+                </p>
+
+                <div class="lunch-grid">
+                    <section class="section-left" aria-labelledby="combo-title">
+                        <h3 id="combo-title" class="section-title">Combinations</h3>
+                        <p class="section-subtitle">(Chicken, Picadillo, or Beef)</p>
+                        <p class="section-note">All lunch combinations served with rice and beans. Add cheese dip 2.00</p>
+
+                        <ol class="combo-list">
+                            <li>
+                                <div class="line-item"><span class="item-name">Enchilada, Taco</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Enchilada, Tostada</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Enchilada, Tamale</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Chimichanga</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Chalupa</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Chile Relleno</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">3 Taquito Rancheros</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Burrito</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Expresso Burrito</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">2 Enchiladas</span><span class="item-price">9.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Fajitas <small>Chicken, Steak or combo</small></span><span class="item-price">12.00</span></div>
+                            </li>
+                        </ol>
+                    </section>
+
+                    <section class="section-right" aria-labelledby="taco-salad-title">
+                        <h3 id="taco-salad-title" class="section-title">Taco Salad</h3>
+
+                        <ul class="taco-list">
+                            <li>
+                                <div class="line-item"><span class="item-name">Beef</span><span class="item-price">7.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Chicken</span><span class="item-price">7.00</span></div>
+                            </li>
+                            <li>
+                                <div class="line-item"><span class="item-name">Picadillo</span><span class="item-price">7.00</span></div>
+                            </li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+
             <div class="ornamento">&#10059; &#10059; &#10059;</div>
-
-            <h2 class="category-title">Taco Salads</h2>
-            <p class="category-subtitle">Crisp Flour Shell Taco Salads</p>
-            <p class="category-desc">
-                All Taco Salads served on a crisp flour shell only. Choice of dressing: mild sauce, Ranch, French, Thousand Island or Bleu cheese. For DELUXE sour cream and guacamole add $2.00.
-            </p>
-
-            <div class="menu-grid">
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Ground Beef</span>
-                        <span class="item-price">$8.00</span>
-                    </div>
-                    <p class="item-desc">Fresh ground beef topped with cheese, then topped again with lettuce, cheese and tomato.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Pollo</span>
-                        <span class="item-price">$8.00</span>
-                    </div>
-                    <p class="item-desc">Shredded chicken topped with cheese, then topped again with lettuce, cheese and tomato.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Picadillo</span>
-                        <span class="item-price">$8.00</span>
-                    </div>
-                    <p class="item-desc">Tender shredded beef with cheese, covered with lettuce, cheese and tomato.</p>
-                </div>
-            </div>
-
-            <div class="ornamento">&#10059; &#10059; &#10059;</div>
-
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
 
@@ -338,4 +410,3 @@
 </body>
 
 </html>
-
