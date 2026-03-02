@@ -210,17 +210,30 @@
                 padding-left: 24px;
             }
 
+            .combo-list li {
+                margin: 10px 0;
+            }
+
+            .line-item {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                align-items: end;
+                gap: 8px;
+            }
+
             .item-name {
-                font-size: 1.48rem;
+                font-size: 1.06rem;
+                line-height: 1.28;
+                letter-spacing: 0;
             }
 
             .item-price {
-                font-size: 1.7rem;
+                font-size: 1.18rem;
             }
 
             .taco-list .item-name,
             .taco-list .item-price {
-                font-size: 1.78rem;
+                font-size: 1.2rem;
             }
         }
     </style>
@@ -410,3 +423,4 @@
 </body>
 
 </html>
+
