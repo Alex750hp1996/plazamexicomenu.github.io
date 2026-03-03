@@ -190,48 +190,134 @@
             margin: 0 0 18px;
         }
 
-        .drinks-grid {
+        .menu-columns {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 14px;
+            gap: 20px;
         }
 
-        .drink-item {
+        .menu-column {
+            display: grid;
+            gap: 18px;
+        }
+
+        .list-block {
             background: rgba(255, 255, 255, 0.42);
             border: 1px solid rgba(74, 44, 42, 0.14);
-            border-left: 5px solid var(--cafe-acento);
             border-radius: 8px;
-            padding: 14px;
+            padding: 14px 14px 12px;
         }
 
-        .line-item {
+        .list-title {
+            margin: 0 0 10px;
+            font-family: var(--fuente-titulos);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--negro-logo);
+            line-height: 1.1;
+            text-align: center;
+        }
+
+        .list-title.large {
+            font-size: 2rem;
+        }
+
+        .list-title.medium {
+            font-size: 1.55rem;
+        }
+
+        .list-title.small {
+            font-size: 1.18rem;
+        }
+
+        .list-note {
+            margin: -4px 0 10px;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+        }
+
+        .menu-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 6px;
+        }
+
+        .menu-line {
             display: flex;
             justify-content: space-between;
             align-items: baseline;
-            gap: 10px;
-            margin-bottom: 6px;
+            gap: 12px;
         }
 
-        .item-name {
-            font-family: var(--fuente-titulos);
-            font-size: 1.5rem;
+        .menu-line span:first-child {
+            font-weight: 700;
             color: var(--negro-logo);
-            line-height: 1.05;
+            line-height: 1.25;
         }
 
-        .item-price {
-            font-family: var(--fuente-titulos);
-            font-size: 1.4rem;
-            color: var(--negro-logo);
+        .menu-line .price {
             white-space: nowrap;
+            font-weight: 700;
+            color: var(--negro-logo);
         }
 
-        .item-desc {
+        .menu-line.center span:first-child {
+            width: 100%;
+            text-align: center;
+        }
+
+        .desc {
             margin: 0;
-            font-size: 0.98rem;
-            line-height: 1.45;
+            font-size: 0.92rem;
+            line-height: 1.35;
+            opacity: 0.92;
+        }
+
+        .subhead {
+            margin: 10px 0 6px;
+            font-family: var(--fuente-titulos);
+            font-size: 1.22rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
             color: var(--negro-logo);
-            opacity: 0.9;
+            text-align: center;
+        }
+
+        .beer-grid-head {
+            display: grid;
+            grid-template-columns: 1fr auto auto auto;
+            gap: 8px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin: 0 0 4px;
+        }
+
+        .beer-grid-row {
+            display: grid;
+            grid-template-columns: 1fr auto auto auto;
+            gap: 8px;
+            align-items: baseline;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .beer-grid-row span:first-child {
+            font-weight: 700;
+        }
+
+        .simple-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: grid;
+            gap: 4px;
+            text-align: center;
+            font-weight: 700;
         }
 
         .ornamento {
@@ -289,7 +375,7 @@
                 text-align: left;
             }
 
-            .drinks-grid {
+            .menu-columns {
                 grid-template-columns: 1fr 1fr;
             }
 
@@ -316,24 +402,29 @@
                 padding: 22px 16px 24px;
             }
 
-            .line-item {
-                display: grid;
-                grid-template-columns: minmax(0, 1fr) auto;
-                align-items: end;
-                gap: 6px;
+            .list-title.large {
+                font-size: 1.72rem;
             }
 
-            .item-name {
-                font-size: 1.12rem;
-                line-height: 1.25;
+            .list-title.medium {
+                font-size: 1.38rem;
             }
 
-            .item-price {
-                font-size: 1.18rem;
+            .menu-line {
+                align-items: flex-start;
             }
 
-            .item-desc {
-                font-size: 0.93rem;
+            .menu-line span:first-child {
+                font-size: 0.96rem;
+            }
+
+            .menu-line .price {
+                font-size: 0.92rem;
+            }
+
+            .beer-grid-head,
+            .beer-grid-row {
+                font-size: 0.82rem;
             }
 
             .coro-image {
@@ -418,65 +509,182 @@
 
         <main id="main-content" class="menu-content">
             <section class="menu-sheet" aria-labelledby="drinks-title">
-                <div class="promo-wrap" aria-label="Thursday Margarita promo">
-                    <div class="promo-card">
-                        <div class="promo-text">
-                            <span class="promo-top">Thursdays Are Now</span>
-                            <span class="promo-main">Margarita Days</span>
-                            <span class="promo-sub">16oz Lime Margarita</span>
-                            <span class="promo-price">Only $3.00</span>
-                        </div>
-                        <img src="resources/images/margarita-hero.jpg" alt="Lime margarita in cocktail glass" class="promo-image" loading="lazy">
-                    </div>
-                    <p class="credit">Image source: Wikimedia Commons (CC BY-SA 3.0)</p>
-
-                    <div class="coronarita-card" aria-label="Coronarita promo">
-                        <div class="coro-text">
-                            <span class="coro-kicker">Pruebe Nuestra</span>
-                            <span class="coro-main">Coronarita</span>
-                            <span class="coro-note">* Served only on the rocks.</span>
-                            <span class="price-burst">$10.00</span>
-                        </div>
-                        <img src="resources/images/coronarita-promo.png" alt="Coronarita cocktail with inverted beer bottle" class="coro-image" loading="lazy">
-                    </div>
-                </div>
-
                 <h2 id="drinks-title" class="menu-title">Drink Menu</h2>
-                <p class="menu-subtitle">Bar & Drinks Specials</p>
                 <hr class="rule">
 
-                <div class="drinks-grid">
-                    <article class="drink-item">
-                        <div class="line-item">
-                            <h3 class="item-name">Margaritas</h3>
-                            <span class="item-price">Reg 5.00 | Flavored 6.50</span>
-                        </div>
-                        <p class="item-desc">Lime, Raspberry, Peach, Watermelon, Strawberry, Banana.</p>
-                    </article>
+                <div class="menu-columns">
+                    <div class="menu-column">
+                        <article class="list-block">
+                            <ul class="menu-list">
+                                <li class="menu-line"><span>Coke, Diet Coke, Sprite, Root Beer, Mr. Pibb, Cherry Coke</span><span class="price">3.00</span></li>
+                                <li class="menu-line"><span>Lemonade, Raspberry Ice Tea, Unsweet Tea, Hot Tea, Coffee</span><span class="price">3.00</span></li>
+                                <li class="menu-line"><span>Mexican Pop Jarritos</span><span class="price">3.00</span></li>
+                            </ul>
+                            <h3 class="subhead">Jarritos Flavors</h3>
+                            <p class="desc">Strawberry, Lime, Mandarin, Mango, Pineapple, Fruit Punch, Apple</p>
+                            <ul class="menu-list" style="margin-top: 8px;">
+                                <li class="menu-line"><span>Milk</span><span class="price">2.75</span></li>
+                                <li class="menu-line"><span>Hot Cocoa</span><span class="price">4.00</span></li>
+                                <li class="menu-line"><span>Horchata</span><span class="price">3.00</span></li>
+                            </ul>
+                        </article>
 
-                    <article class="drink-item">
-                        <div class="line-item">
-                            <h3 class="item-name">Thursday Special</h3>
-                            <span class="item-price">3.00</span>
-                        </div>
-                        <p class="item-desc">16oz lime margarita special price.</p>
-                    </article>
+                        <article class="list-block">
+                            <h3 class="list-title medium">Beer</h3>
+                            <h4 class="subhead">American Bottled Beer $4.00</h4>
+                            <ul class="simple-list">
+                                <li>BUD / BUD LIGHT</li>
+                                <li>BUSCH LIGHT</li>
+                                <li>COORS LIGHT</li>
+                                <li>MICHELOB ULTRA</li>
+                                <li>MILLER LIGHT</li>
+                                <li>NON ALCOHOLIC</li>
+                            </ul>
 
-                    <article class="drink-item">
-                        <div class="line-item">
-                            <h3 class="item-name">Coronarita</h3>
-                            <span class="item-price">10.00</span>
-                        </div>
-                        <p class="item-desc">Served with beer bottle over margarita.</p>
-                    </article>
+                            <h4 class="subhead">On Tap Beer</h4>
+                            <div class="beer-grid-head">
+                                <span></span><span>Small</span><span>Large</span><span>Pitcher</span>
+                            </div>
+                            <div class="beer-grid-row">
+                                <span>MODELO ESPECIAL</span><span>4.00</span><span>6.00</span><span>12.00</span>
+                            </div>
+                            <div class="beer-grid-row">
+                                <span>BUDWEISER</span><span>3.00</span><span>5.00</span><span>11.00</span>
+                            </div>
 
-                    <article class="drink-item">
-                        <div class="line-item">
-                            <h3 class="item-name">Imported Beer</h3>
-                            <span class="item-price">5.00</span>
-                        </div>
-                        <p class="item-desc">Corona, Pacifico, Modelo, Dos Equis, Tecate.</p>
-                    </article>
+                            <h4 class="subhead">Mexican Bottled Beer $5.00</h4>
+                            <ul class="simple-list">
+                                <li>CORONA / CORONA LIGHT</li>
+                                <li>PACIFICO</li>
+                                <li>DOS EQUIS XX</li>
+                                <li>NEGRA MODELO</li>
+                                <li>TECATE</li>
+                                <li>MODELO ESPECIAL</li>
+                                <li>SOL BEER</li>
+                            </ul>
+                            <ul class="menu-list" style="margin-top: 8px;">
+                                <li class="menu-line"><span>MICHELADA (32 OZ.)</span><span class="price">9.00</span></li>
+                            </ul>
+                        </article>
+
+                        <article class="list-block">
+                            <h3 class="list-title medium">Wines</h3>
+                            <p class="list-note">$5.00</p>
+                            <ul class="simple-list">
+                                <li>CHARDONNAY</li>
+                                <li>MERLOT</li>
+                                <li>ZINFANDEL</li>
+                            </ul>
+                        </article>
+                    </div>
+
+                    <div class="menu-column">
+                        <article class="list-block">
+                            <ul class="menu-list">
+                                <li>
+                                    <div class="menu-line"><span>PALOMA (32 OZ.)</span><span class="price">12.00</span></div>
+                                    <p class="desc">Tequila, Mimos, grapefruit soda, lime juice, orange juice, triple sec and served on the rocks.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>SCORPION</span><span class="price">6.00</span></div>
+                                    <p class="desc">Bacardi, Myers and 151 Rum with a blend of juices.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>FOG CUTTER</span><span class="price">6.00</span></div>
+                                    <p class="desc">Gin, brandy and OJ with a hint of cherry brandy.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>JALISCO ICE TEA</span><span class="price">6.00</span></div>
+                                    <p class="desc">Cool, refreshing and relaxing rum, vodka, gin, tequila, triple sec and coke, served on the rocks.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>MACHO</span><span class="price">6.00</span></div>
+                                    <p class="desc">Southern comfort, soy gin and orange juice mixed with 151 Rum.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>MIAMI ICE</span><span class="price">6.00</span></div>
+                                    <p class="desc">A cool combination of peach schnapps, vodka, orange juice and 7up.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>A.M.F. (ADIOS, MY FRIEND)</span><span class="price">6.00</span></div>
+                                    <p class="desc">Gin, vodka and tequila made smooth with 7up, triple sec and pineapple juice.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>TIJUANA SUNRISE</span><span class="price">6.00</span></div>
+                                    <p class="desc">Tequila and orange juice with a float of grenadine. Sure to wake you up.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>ACAPULCO SUNSET</span><span class="price">6.00</span></div>
+                                    <p class="desc">Tequila, orange juice and grenadine, topped with 151 Rum. You're ready for the evening.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>BLACK OPAL</span><span class="price">6.00</span></div>
+                                    <p class="desc">Vodka, rum, gin, tequila, triple sec, splash of cranberry, sweet/sour and 7up.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>A LOCO</span><span class="price">6.00</span></div>
+                                    <p class="desc">Three types of rum, blended with fruit juices.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>HEAT WAVE</span><span class="price">6.00</span></div>
+                                    <p class="desc">Bacardi Rum, peach schnapps and cranberry juice.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>ELECTRIC WATERMELON</span><span class="price">6.00</span></div>
+                                    <p class="desc">Vodka, rum and melon liquor served with triple sec and a splash of 7up.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>CAFE ESPANOL</span><span class="price">6.00</span></div>
+                                    <p class="desc">Tia Maria and Spanish brandy with coffee and topped with whipped cream.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>CAFE MEXICANO</span><span class="price">6.00</span></div>
+                                    <p class="desc">Coffee liqueur, tequila and coffee topped with whipped cream.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>WHITE RUSSIAN</span><span class="price">6.00</span></div>
+                                    <p class="desc">Vodka, Cap Oro, 1/2 and 1/2 served on the rocks.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>BLOODY MARY</span><span class="price">4.50</span></div>
+                                    <p class="desc">Bloody Mary mix, vodka served on the rocks.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>STRAWBERRY DAIQUIRI</span><span class="price">7.00</span></div>
+                                    <p class="desc">Rum, frozen strawberry.</p>
+                                </li>
+                                <li>
+                                    <div class="menu-line"><span>PINA COLADA</span><span class="price">7.00</span></div>
+                                </li>
+                            </ul>
+                        </article>
+
+                        <article class="list-block">
+                            <h3 class="list-title medium">Shots of Tequila</h3>
+                            <ul class="menu-list">
+                                <li class="menu-line"><span>PATRON, DON JULIO</span><span class="price">$8.00 each</span></li>
+                                <li class="menu-line"><span>HERRADURA, CAZADORES, JOSE CUERVO, 1800 SILVER, HORNITOS</span><span class="price">$7.00 each</span></li>
+                            </ul>
+                        </article>
+
+                        <article class="list-block">
+                            <h3 class="list-title large">Margaritas</h3>
+                            <ul class="menu-list">
+                                <li class="menu-line"><span>GRANDE 16 OZ. (LIME)</span><span class="price">5.00</span></li>
+                                <li class="menu-line"><span>RASBERRY</span><span class="price">6.50</span></li>
+                                <li class="menu-line"><span>PEACH</span><span class="price">6.50</span></li>
+                                <li class="menu-line"><span>WATERMELON</span><span class="price">6.50</span></li>
+                                <li class="menu-line"><span>STRAWBERRY</span><span class="price">6.50</span></li>
+                                <li class="menu-line"><span>BANANA</span><span class="price">6.50</span></li>
+                                <li class="menu-line"><span>GOLD (1 extra shot of Cuervo)</span><span class="price">8.00</span></li>
+                                <li class="menu-line"><span>CADILLAC (1 extra shot of Cuervo &amp; Grand Marnier)</span><span class="price">10.00</span></li>
+                                <li class="menu-line"><span>PITCHER BLENDED LIME</span><span class="price">$18.00</span></li>
+                                <li class="menu-line"><span>PITCHER BLENDED FLAVORED</span><span class="price">$23.00</span></li>
+                                <li class="menu-line"><span>PITCHER ROCKS LIME</span><span class="price">$20.00</span></li>
+                                <li class="menu-line"><span>PITCHER ROCKS FLAVORED</span><span class="price">$25.00</span></li>
+                            </ul>
+                        </article>
+                    </div>
                 </div>
             </section>
 
