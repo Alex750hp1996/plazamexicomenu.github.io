@@ -46,6 +46,74 @@
             position: relative;
         }
 
+        .coronarita-card {
+            margin-top: 14px;
+            background: linear-gradient(180deg, #f8efd9 0%, #efe1bd 100%);
+            border: 2px solid #d9c18a;
+            border-radius: 16px;
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+            padding: 18px 16px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .coro-text {
+            text-align: center;
+            color: #1f2631;
+        }
+
+        .coro-kicker {
+            display: block;
+            font-family: 'Rye', serif;
+            font-size: clamp(1rem, 4.4vw, 1.7rem);
+            line-height: 1.1;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+        }
+
+        .coro-main {
+            display: block;
+            font-family: 'Rye', serif;
+            font-size: clamp(2rem, 9vw, 3.8rem);
+            line-height: 0.95;
+            color: #a8e63b;
+            -webkit-text-stroke: 1.5px #162033;
+            text-shadow: 0 2px 0 rgba(0, 0, 0, 0.16);
+            margin: 6px 0 8px;
+            text-transform: uppercase;
+        }
+
+        .coro-note {
+            display: block;
+            font-family: 'Rye', serif;
+            font-size: clamp(1.1rem, 5vw, 2rem);
+            line-height: 1.1;
+            margin-bottom: 10px;
+        }
+
+        .price-burst {
+            display: inline-block;
+            background: #f59f2a;
+            color: #172033;
+            font-family: 'Rye', serif;
+            font-size: clamp(1.3rem, 5vw, 2.4rem);
+            line-height: 1;
+            padding: 14px 20px;
+            clip-path: polygon(50% 0%, 60% 18%, 78% 6%, 74% 25%, 96% 22%, 82% 40%, 100% 50%, 82% 60%, 96% 78%, 74% 75%, 78% 94%, 60% 82%, 50% 100%, 40% 82%, 22% 94%, 26% 75%, 4% 78%, 18% 60%, 0% 50%, 18% 40%, 4% 22%, 26% 25%, 22% 6%, 40% 18%);
+        }
+
+        .coro-image {
+            width: 100%;
+            max-width: 270px;
+            margin: 0 auto;
+            display: block;
+            object-fit: contain;
+            height: 280px;
+            filter: drop-shadow(0 8px 14px rgba(0, 0, 0, 0.22));
+        }
+
         .promo-text {
             text-align: center;
             color: #1e1e1e;
@@ -228,6 +296,15 @@
             .promo-image {
                 height: 220px;
             }
+
+            .coronarita-card {
+                grid-template-columns: 1.2fr 0.8fr;
+                padding: 18px 20px;
+            }
+
+            .coro-text {
+                text-align: left;
+            }
         }
 
         @media (max-width: 700px) {
@@ -257,6 +334,10 @@
 
             .item-desc {
                 font-size: 0.93rem;
+            }
+
+            .coro-image {
+                height: 240px;
             }
         }
     </style>
@@ -348,6 +429,16 @@
                         <img src="resources/images/margarita-hero.jpg" alt="Lime margarita in cocktail glass" class="promo-image" loading="lazy">
                     </div>
                     <p class="credit">Image source: Wikimedia Commons (CC BY-SA 3.0)</p>
+
+                    <div class="coronarita-card" aria-label="Coronarita promo">
+                        <div class="coro-text">
+                            <span class="coro-kicker">Pruebe Nuestra</span>
+                            <span class="coro-main">Coronarita</span>
+                            <span class="coro-note">* Served only on the rocks.</span>
+                            <span class="price-burst">$10.00</span>
+                        </div>
+                        <img src="resources/images/coronarita-promo.png" alt="Coronarita cocktail with inverted beer bottle" class="coro-image" loading="lazy">
+                    </div>
                 </div>
 
                 <h2 id="drinks-title" class="menu-title">Drink Menu</h2>
