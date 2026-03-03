@@ -4,114 +4,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Fajitas Menu - Plaza Mexico Mexican Restaurant">
-    <title>Fajitas - Plaza Mexico</title>
+    <meta name="description" content="Child Plates Menu - Plaza Mexico Mexican Restaurant">
+    <title>Child Plates - Plaza Mexico</title>
 
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Great+Vibes&family=Lato:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- CSS Principal -->
     <link rel="stylesheet" href="resources/css/index.css">
 
     <style>
         .menu-content {
-            padding: 40px 30px;
-            max-width: 900px;
+            padding: 34px 24px 40px;
+            max-width: 980px;
             margin: 0 auto;
         }
 
+        .menu-sheet {
+            background: rgba(255, 255, 255, 0.34);
+            border: 1px solid rgba(74, 44, 42, 0.18);
+            border-radius: 10px;
+            box-shadow: 0 10px 24px rgba(74, 44, 42, 0.1);
+            padding: 28px 24px 30px;
+        }
+
         .category-title {
-            font-family: var(--fuente-titulos);
-            color: var(--cafe-acento);
-            font-size: 2.8rem;
+            font-family: 'Great Vibes', cursive;
+            font-size: clamp(3rem, 8vw, 5.4rem);
+            line-height: 1;
             text-align: center;
-            margin-bottom: 15px;
-            text-transform: uppercase;
-            font-weight: 900;
-            letter-spacing: 2px;
-        }
-
-        .category-subtitle {
-            text-align: center;
-            font-style: italic;
-            margin-bottom: 10px;
             color: var(--negro-logo);
-            font-size: 1.1rem;
-            opacity: 0.8;
+            margin-bottom: 12px;
+            font-weight: 400;
         }
 
-        .category-desc {
+        .rule {
+            border: 0;
+            height: 1px;
+            background: rgba(74, 44, 42, 0.5);
+            margin: 0 0 16px;
+        }
+
+        .service-note {
             text-align: center;
-            font-style: italic;
-            margin-bottom: 40px;
+            margin: 0 auto 24px;
+            max-width: 860px;
+            font-size: 1.04rem;
+            line-height: 1.5;
             color: var(--negro-logo);
-            font-size: 1rem;
-            line-height: 1.6;
-            max-width: 760px;
-            margin-left: auto;
-            margin-right: auto;
+            opacity: 0.92;
         }
 
-        .menu-grid {
+        .plates-grid {
             display: grid;
             grid-template-columns: 1fr;
-            gap: 25px;
-            margin-top: 30px;
+            gap: 22px;
         }
 
-        .menu-item {
-            background-color: rgba(255, 255, 255, 0.4);
-            padding: 20px;
-            border-radius: 8px;
-            border-left: 4px solid var(--cafe-acento);
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        .column-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
         }
 
-        .menu-item:hover {
-            transform: translateX(5px);
-            box-shadow: 0 4px 15px rgba(74, 44, 42, 0.2);
+        .column-list li {
+            margin: 7px 0;
         }
 
-        .item-header {
+        .line-item {
             display: flex;
-            justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 10px;
-            gap: 15px;
+            justify-content: space-between;
+            gap: 14px;
         }
 
         .item-name {
             font-family: var(--fuente-titulos);
-            font-size: 1.25rem;
-            font-weight: 700;
+            font-size: 1.7rem;
             color: var(--negro-logo);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            flex: 1;
+            line-height: 1.15;
+        }
+
+        .item-name small {
+            font-family: var(--fuente-texto);
+            font-size: 0.62em;
+            font-weight: 400;
+            opacity: 0.9;
         }
 
         .item-price {
-            font-weight: 700;
-            color: var(--cafe-acento);
-            white-space: nowrap;
-            font-size: 1.1rem;
-            font-family: var(--fuente-texto);
-        }
-
-        .item-desc {
-            font-size: 0.95rem;
+            font-family: var(--fuente-titulos);
+            font-size: 1.9rem;
             color: var(--negro-logo);
-            line-height: 1.5;
-            margin: 0;
-            opacity: 0.85;
+            white-space: nowrap;
+            line-height: 1;
         }
 
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
-            margin: 30px 0;
+            margin: 24px 0 10px;
             text-align: center;
         }
 
@@ -129,7 +121,7 @@
             border-radius: 5px;
             transition: all 0.3s ease;
             font-size: 0.9rem;
-            margin: 20px auto;
+            margin: 18px auto 0;
             display: flex;
             justify-content: center;
             max-width: 250px;
@@ -142,94 +134,45 @@
         }
 
         .back-button::before {
-            content: '&larr;';
+            content: '\2190';
             font-size: 1.2rem;
         }
 
-        @media (min-width: 768px) {
-            .menu-grid {
+        @media (min-width: 900px) {
+            .menu-sheet {
+                padding: 32px 28px 34px;
+            }
+
+            .plates-grid {
                 grid-template-columns: 1fr 1fr;
-                column-gap: 30px;
+                gap: 34px;
             }
-
-            .category-title {
-                font-size: 3.5rem;
-            }
-
-            .category-desc {
-                font-size: 1.1rem;
-            }
-
-            .item-name {
-                font-size: 1.35rem;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .menu-content {
-                padding: 30px 20px;
-            }
-
-            .category-title {
-                font-size: 2.2rem;
-            }
-
-            .item-header {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 5px;
-            }
-
-            .item-price {
-                font-size: 1rem;
-            }
-
-            .menu-item {
-                padding: 15px;
-            }
-        }
-    
-        /* Typography aligned with Lunch Menu */
-        .category-title {
-            font-family: 'Great Vibes', cursive;
-            font-size: clamp(2.6rem, 7vw, 4.4rem);
-            color: var(--negro-logo);
-            text-transform: none;
-            letter-spacing: 0.5px;
-            line-height: 1.05;
-            font-weight: 400;
-            margin-bottom: 10px;
-        }
-
-        .category-subtitle {
-            font-family: var(--fuente-texto);
-            font-size: 1.08rem;
-            line-height: 1.5;
-            color: var(--negro-logo);
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-
-        .category-desc {
-            font-family: var(--fuente-texto);
-            font-size: 1rem;
-            line-height: 1.65;
-            color: var(--negro-logo);
-            opacity: 0.9;
-            max-width: 820px;
-            margin-left: auto;
-            margin-right: auto;
         }
 
         @media (max-width: 700px) {
-            .category-title {
-                font-size: clamp(2.1rem, 11vw, 3.1rem);
+            .menu-content {
+                padding: 28px 16px 34px;
             }
 
-            .category-subtitle,
-            .category-desc {
-                font-size: 0.96rem;
-                line-height: 1.55;
+            .menu-sheet {
+                padding: 22px 16px 24px;
+            }
+
+            .line-item {
+                display: grid;
+                grid-template-columns: minmax(0, 1fr) auto;
+                align-items: end;
+                gap: 8px;
+            }
+
+            .item-name {
+                font-size: 1.06rem;
+                line-height: 1.28;
+                letter-spacing: 0;
+            }
+
+            .item-price {
+                font-size: 1.18rem;
             }
         }
     </style>
@@ -274,7 +217,6 @@
                         <li role="none"><a href="burritos.html" role="menuitem">Los Burritos</a></li>
                         <li role="none"><a href="salad.html" role="menuitem">Ensaladas</a></li>
                         <li role="none"><a href="taco-salad.html" role="menuitem">Taco Salads</a></li>
-                        
                         <li role="none"><a href="enchiladas.html" role="menuitem">Las Enchiladas</a></li>
                         <li role="none"><a href="child-plates.html" role="menuitem">Child Plates</a></li>
                         <li role="none"><a href="desserts.html" role="menuitem">Desserts</a></li>
@@ -310,67 +252,58 @@
         </nav>
 
         <main id="main-content" class="menu-content">
+            <section class="menu-sheet" aria-labelledby="child-plates-title">
+                <h2 id="child-plates-title" class="category-title">Child Plates</h2>
+                <hr class="rule">
+
+                <p class="service-note">All child plates (except chicken nuggets) served with rice and beans. Children 12 years and under.</p>
+
+                <div class="plates-grid">
+                    <ul class="column-list">
+                        <li>
+                            <div class="line-item"><span class="item-name">Tostada</span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Enchilada</span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Taco</span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Chicken Nuggets <small>w/ french fries</small></span><span class="item-price">6.50</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Chicken Tenders <small>w/ french fries</small></span><span class="item-price">6.50</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Tamale</span><span class="item-price">5.50</span></div>
+                        </li>
+                    </ul>
+
+                    <ul class="column-list">
+                        <li>
+                            <div class="line-item"><span class="item-name">Mini Burrito</span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Mini Quesadilla</span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Mini Chimichanga <small>w/ cheese salsa topping</small></span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Mini Flautas <small>2 per order</small></span><span class="item-price">6.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Mini Carne Asada</span><span class="item-price">7.00</span></div>
+                        </li>
+                        <li>
+                            <div class="line-item"><span class="item-name">Mini Burrito Asada <small>w/ cheese dip</small></span><span class="item-price">6.50</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
             <div class="ornamento">&#10059; &#10059; &#10059;</div>
-
-            <h2 class="category-title">Fajitas</h2>
-            <p class="category-subtitle">Served sizzling with fresh vegetables</p>
-            <p class="category-desc">
-                Your choice of steak, chicken strips or shrimp, marinated in our secret sauce, then delivered sizzling hot over a bed of sauteed onions and green peppers. Served with pico de gallo, sour cream, guacamole, rice, beans and tortillas.
-            </p>
-
-            <div class="menu-grid">
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Steak</span>
-                        <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Classic steak fajitas served sizzling with onions and green peppers.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Chicken</span>
-                        <span class="item-price">$14.00</span>
-                    </div>
-                    <p class="item-desc">Tender chicken strip fajitas marinated in our house secret sauce.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Shrimp</span>
-                        <span class="item-price">$15.00</span>
-                    </div>
-                    <p class="item-desc">Juicy shrimp fajitas with sauteed onions and green peppers.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Combo: Any 2</span>
-                        <span class="item-price">$15.75</span>
-                    </div>
-                    <p class="item-desc">Pick any two proteins: steak, chicken or shrimp.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Trio Fajitas</span>
-                        <span class="item-price">$16.75</span>
-                    </div>
-                    <p class="item-desc">Chicken, steak and shrimp served together on one sizzling skillet.</p>
-                </div>
-
-                <div class="menu-item">
-                    <div class="item-header">
-                        <span class="item-name">Fajita Pueblo Viejo</span>
-                        <span class="item-price">$18.00</span>
-                    </div>
-                    <p class="item-desc">Steak, chicken, shrimp and chorizo for the full fajita experience.</p>
-                </div>
-
-            </div>
-            <div class="ornamento">&#10059; &#10059; &#10059;</div>
-
             <a href="index.html" class="back-button">Back to Home</a>
         </main>
 
@@ -412,6 +345,3 @@
 </body>
 
 </html>
-
-
-
