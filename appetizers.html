@@ -54,6 +54,7 @@
             grid-template-columns: 1fr;
             gap: 25px;
             margin-top: 30px;
+            align-items: stretch;
         }
         
         .menu-item {
@@ -62,6 +63,10 @@
             border-radius: 8px;
             border-left: 4px solid var(--cafe-acento);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            height: 100%;
         }
         
         .menu-item:hover {
@@ -341,7 +346,10 @@
 
                 <div class="menu-item">
                     <div class="item-header">
-                        <span class="item-name">Super Nachos</span>
+                        <span class="item-name">Super Nachos</span> /
+
+
+
                         <span class="item-price">Sm $8.50 / Lg $10.00</span>
                     </div>
                     <p class="item-desc">Beans, guacamole, sour cream, tomatoes, onions, and cheddar cheese. (Add meat +$1.00)</p>
@@ -376,7 +384,9 @@
                         <span class="item-name">Grande Fiesta Platter</span>
                         <span class="item-price">$16.00</span>
                     </div>
-                    <p class="item-desc">A delicious assortment of our finest appetizers including ttaquitos rancheros, chicken taquitos, quesadillas, nachos, as well as sour cream, garnished with lettuce, tomato, guacamole and parmesan cheese</p>
+                    <p class="item-desc">A delicious assortment of our finest appetizers including ttaquitos rancheros, chicken taquitos, quesadillas, nachos, as well as sour cream, garnished with lettuce, tomato, guacamole and parmesan cheese. 0
+
+                    </p>
                 </div>
 
                 <div class="menu-item">
@@ -392,7 +402,7 @@
                         <span class="item-name">Quesadilla Asada</span>
                         <span class="item-price">$12.50</span>
                     </div>
-                    <p class="item-desc">Flour tortillas stuffed with grilled chopped steak and melted cheese, served with sour cream and guacamole</p>
+                    <p class="item-desc">Flour tortillas stuffed with grilled chopped steak and melted cheese, served with sour cream and guacamole.</p>
                 </div>
 
                 <div class="menu-item">
@@ -408,7 +418,7 @@
                         <span class="item-name">Chesse Quesadillas</span>
                         <span class="item-price">$9.00</span>
                     </div>
-                    <p class="item-desc">Served with lettuce, tomato, sour cream, and guacamole</p>
+                    <p class="item-desc">Served with lettuce, tomato, sour cream, and guacamole.</p>
                 </div>
 
                 <div class="menu-item">
