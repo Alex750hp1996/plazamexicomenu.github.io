@@ -60,20 +60,23 @@
         
         .combo-list {
             list-style: decimal;
-            margin: 0;
-            padding-left: 30px;
+            list-style-position: outside;
+            margin: 0 auto;
+            max-width: 860px;
+            padding-left: 34px;
         }
         
         .combo-list li {
-            margin: 9px 0;
-            padding-left: 6px;
+            margin: 10px 0;
+            padding-left: 8px;
         }
         
         .line-item {
             display: flex;
-            align-items: baseline;
+            align-items: flex-start;
             justify-content: space-between;
             gap: 14px;
+            text-align: left;
         }
         
         .item-name {
@@ -82,6 +85,7 @@
             color: var(--negro-logo);
             line-height: 1.2;
             flex: 1;
+            text-align: left;
         }
         
         .item-price {
@@ -90,6 +94,7 @@
             color: var(--negro-logo);
             white-space: nowrap;
             line-height: 1;
+            text-align: right;
         }
         
         .ornamento {
@@ -145,7 +150,7 @@
                 font-size: 0.96rem;
             }
             .combo-list {
-                padding-left: 24px;
+                padding-left: 28px;
             }
             .line-item {
                 display: grid;
@@ -285,7 +290,7 @@
                         <div class="line-item"><span class="item-name">Chalupa, (crispy flour tortilla and choice of Chicken, beef or shredded beef).</span><span class="item-price">$11.00</span></div>
                     </li>
                     <li>
-                        <div class="line-item"><span class="item-name">Tortilla soup</span><span class="item-price">$15.00</span></div>
+                        <div class="line-item"><span class="item-name">Tortilla Soup</span><span class="item-price">$16.00</span></div>
                     </li>
                     <li value="14">
                         <div class="line-item"><span class="item-name">1 Chile Relleno, 1 Chimichanga and 1 Enchilada.</span><span class="item-price">$18.00</span></div>
