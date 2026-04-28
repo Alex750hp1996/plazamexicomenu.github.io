@@ -216,6 +216,10 @@ header h1 {
     padding: 0;
     list-style: none;
     border-top: 2px solid var(--cafe-acento);
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
 }
 
 .dropdown-content li {
@@ -467,6 +471,30 @@ nav,
 main {
     position: relative;
     z-index: 2;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 2000;
+    }
+    .dropdown {
+        position: relative;
+    }
+    .dropdown-content {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.28);
+        z-index: 2001;
+    }
+    .dropdown-content a {
+        padding-top: 13px;
+        padding-bottom: 13px;
+    }
 }
 
 
