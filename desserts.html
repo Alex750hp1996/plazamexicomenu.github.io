@@ -19,7 +19,7 @@
             max-width: 980px;
             margin: 0 auto;
         }
-
+        
         .menu-sheet {
             background: rgba(255, 255, 255, 0.34);
             border: 1px solid rgba(74, 44, 42, 0.18);
@@ -27,7 +27,7 @@
             box-shadow: 0 10px 24px rgba(74, 44, 42, 0.1);
             padding: 28px 24px 30px;
         }
-
+        
         .category-title {
             font-family: 'Great Vibes', cursive;
             font-size: clamp(3rem, 8vw, 5.4rem);
@@ -37,7 +37,7 @@
             margin-bottom: 6px;
             font-weight: 400;
         }
-
+        
         .category-subtitle {
             text-align: center;
             margin: 0 0 18px;
@@ -46,31 +46,31 @@
             color: var(--negro-logo);
             opacity: 0.9;
         }
-
+        
         .rule {
             border: 0;
             height: 1px;
             background: rgba(74, 44, 42, 0.5);
             margin: 0 0 20px;
         }
-
+        
         .dessert-grid {
             display: grid;
             grid-template-columns: 1fr;
             gap: 16px;
         }
-
+        
         .dessert-item {
             background: rgba(255, 255, 255, 0.44);
             border: 1px solid rgba(74, 44, 42, 0.14);
             border-radius: 10px;
             overflow: hidden;
         }
-
+        
         .dessert-body {
             padding: 14px 14px 16px;
         }
-
+        
         .line-item {
             display: flex;
             justify-content: space-between;
@@ -78,14 +78,14 @@
             gap: 12px;
             margin-bottom: 6px;
         }
-
+        
         .item-name {
             font-family: var(--fuente-titulos);
             font-size: 1.85rem;
             line-height: 1.04;
             color: var(--negro-logo);
         }
-
+        
         .item-price {
             font-family: var(--fuente-titulos);
             font-size: 1.9rem;
@@ -93,7 +93,7 @@
             color: var(--negro-logo);
             white-space: nowrap;
         }
-
+        
         .item-desc {
             margin: 0;
             font-size: 1rem;
@@ -101,7 +101,7 @@
             color: var(--negro-logo);
             opacity: 0.9;
         }
-
+        
         .dessert-image {
             width: 100%;
             height: 220px;
@@ -110,14 +110,14 @@
             display: block;
             border-bottom: 1px solid rgba(74, 44, 42, 0.14);
         }
-
+        
         .ornamento {
             font-size: 2rem;
             color: var(--cafe-acento);
             margin: 24px 0 10px;
             text-align: center;
         }
-
+        
         .back-button {
             display: inline-flex;
             align-items: center;
@@ -137,67 +137,59 @@
             justify-content: center;
             max-width: 250px;
         }
-
+        
         .back-button:hover {
             background-color: var(--negro-logo);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
-
+        
         .back-button::before {
             content: '\2190';
             font-size: 1.2rem;
         }
-
+        
         @media (min-width: 860px) {
             .dessert-grid {
                 grid-template-columns: 1fr 1fr;
             }
-
             .dessert-item.featured {
                 grid-column: 1 / -1;
                 display: grid;
                 grid-template-columns: 1.05fr 1fr;
                 align-items: stretch;
             }
-
             .dessert-item.featured .dessert-image {
                 height: 100%;
                 min-height: 260px;
                 border-bottom: 0;
                 border-right: 1px solid rgba(74, 44, 42, 0.14);
             }
-
             .dessert-item.featured .dessert-body {
                 padding: 18px 18px 20px;
             }
         }
-
+        
         @media (max-width: 700px) {
             .menu-content {
                 padding: 28px 16px 34px;
             }
-
             .menu-sheet {
                 padding: 22px 16px 24px;
             }
-
             .line-item {
                 display: grid;
                 grid-template-columns: minmax(0, 1fr) auto;
                 gap: 8px;
                 align-items: end;
             }
-
             .item-name {
                 font-size: 1.2rem;
                 line-height: 1.25;
             }
-
             .item-price {
                 font-size: 1.24rem;
             }
-
             .dessert-image {
                 height: 200px;
             }
@@ -313,7 +305,7 @@
                                 <h3 class="item-name">Deep-Fried Ice Cream</h3>
                                 <span class="item-price">6.00</span>
                             </div>
-                            <p class="item-desc">A vanilla ice cream ball deep fried and crunchy. Served with your choice of chocolate or strawberry topping.</p>
+                            <p class="item-desc">It's amazing and it's delicious. A vanilla ice cream ball deep fried and crunchy. Served with your choice of chocolate or strawberry topping.</p>
                         </div>
                     </article>
                 </div>
