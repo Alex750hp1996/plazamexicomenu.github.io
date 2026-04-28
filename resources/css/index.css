@@ -470,6 +470,61 @@ main {
 }
 
 
+/* ========================================
+   12.1. ESTABILIDAD RESPONSIVE DEL MENU
+   ======================================== */
+
+.menu-content,
+.menu-sheet,
+.menu-grid,
+.menu-item,
+.item-header,
+.line-item,
+.dessert-item,
+.dessert-body,
+.list-block,
+.combo-item,
+.menu-section {
+    min-width: 0;
+}
+
+.item-name,
+.item-desc,
+.category-desc,
+.description,
+.desc,
+.combo-item,
+.menu-line span:first-child {
+    overflow-wrap: anywhere;
+}
+
+.item-price,
+.price {
+    flex: 0 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    .item-header,
+    .line-item {
+        gap: 8px;
+    }
+    .menu-content {
+        padding-left: 12px !important;
+        padding-right: 12px !important;
+    }
+    .menu-grid {
+        gap: 16px !important;
+    }
+}
+
+
 /* Scrollbar personalizado */
 
 .dropdown-content::-webkit-scrollbar {
